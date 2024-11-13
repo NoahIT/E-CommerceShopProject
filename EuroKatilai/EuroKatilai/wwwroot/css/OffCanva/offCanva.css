@@ -1,0 +1,63 @@
+﻿
+.custom-offcanvas {
+    background-color: transparent;
+    border: none; 
+    color: white; 
+    font-size: 20px; 
+}
+
+.offcanvas-title{
+    margin-left: 85px;
+}
+
+.btn-primary.custom-offcanvas {
+    background-color: transparent;
+    border: none;
+}
+
+.offcanvas {
+    background-color: white;
+}
+
+.offcanvas-header {
+    background-color: white; /* Dark red background */
+    color: black;
+}
+
+.offcanvas-body {
+    padding: 0; /* Remove padding if not needed */
+}
+
+.nav-link-custom {
+    color: black; /* White text */
+    padding: 15px 20px; /* Spacing */
+    text-decoration: none; /* No underline */
+    display: block; /* Make the links fill the container */
+    border: none; /* No borders */
+    text-align: left; /* Align text to the left */
+    background-color: white;
+    margin: 10px;
+    font-weight: 600;
+    font-size: 18px;
+    border: solid 3px #871227;
+    border-radius: 10px;
+}
+
+    .nav-link-custom:hover,
+    .nav-link-custom:focus {
+        color: #871227; /* White text for hover state */
+        text-decoration: none; /* No underline on hover */
+        background-color: #f6bcc6;
+    }
+
+    /* Style for the active category label */
+    .nav-link-custom.active {
+        font-weight: bold;
+        background-color: white;
+        cursor: default;
+        align-content: center;
+        text-align: center;
+        border-color: #737373;
+        color: black;
+        border: none;
+    }

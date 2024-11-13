@@ -1,0 +1,338 @@
+﻿@using System.Globalization
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@model AddressViewModel
+
+@{
+    ViewData["Title"] = "Apsipirkimo_detalės";
+}
+
+<link rel="stylesheet" href="~/css/PaymentDetails/paymentDetails.css" />
+<link rel="stylesheet" href="~/css/PaymentDetails/paymentSummary.css" />
+<link rel="stylesheet" href="~/css/Forms/forms.css" />
+<link rel="stylesheet" href="~/css/invalidComp/invalidCss.css" />
+
+<link rel="stylesheet" href="~/css/Breadcrumbs/breadcrumbs.css" />
+
+@await Html.PartialAsync("offCanvaNavBar")
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Pradžia</a></li>
+        <li class="breadcrumb-item"><a href="/cart">Prekių krepšelis</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Adresas</li>
+    </ol>
+</nav>
+
+<div class="checkout-container">
+    <div class="checkout-container-details">
+        <div class="checkout-personal-details">
+            <h2>Užpildykite pirkėjo duomenis</h2>
+
+            <div class="switch-box">
+                <button id="btnfiz" class="active" type="button" onclick="switchView('fizinisAsmuoFormDView')">Fizinis asmuo</button>
+                <button id="btnjur" type="button" onclick="switchView('juridinisAsmuoFormDView')">Juridinis asmuo</button>
+            </div>
+
+            <div id="view-fizinisAsmuoFormDView">
+                <form id="formFizinisAsmuo" action="/checkout/address" method="post">
+                    @Html.AntiForgeryToken()
+                    
+                    <input type="hidden" id="DeliveryF" name="Delivery" value="Pristatymas adresu">
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="input-name-label">Vardas</label>
+                            <input class="input-details" type="text" id="RecieverName" name="RecieverName" placeholder="Vardas" value="@Model.RecieverName" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="input-name-label">Pavardė</label>
+                            <input class="input-details" type="text" id="RecieverSurname" name="RecieverSurname" placeholder="Pavardė" value="@Model.RecieverSurname" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="input-name-label">El. paštas</label>
+                            <input class="input-details" type="text" id="Email" name="Email" placeholder="El. paštas" value="@Model.Email" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="input-name-label">Telefonas</label>
+                            <input class="input-details" type="text" id="Phone" name="Phone" placeholder="Telefonas" value="@Model.Phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="input-name-label">Šalis</label>
+                            <input class="input-details" type="text" id="Country" name="Country" placeholder="Šalis" value="@Model.Country" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="input-name-label">Savivaldybė</label>
+                            <input class="input-details" type="text" id="Region" name="Region" placeholder="Savivaldybė" value="@Model.Region" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="input-name-label">Miestas</label>
+                            <input class="input-details" type="text" id="City" name="City" placeholder="Miestas" value="@Model.City" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="input-name-label">Gatvė</label>
+                            <input class="input-details" type="text" id="Street" name="Street" placeholder="Gatvė" value="@Model.Street" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="input-name-label">Namas</label>
+                            <input class="input-details" type="text" id="House" name="House" placeholder="Namas" value="@Model.House" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="input-name-label">Butas</label>
+                            <input class="input-details" type="text" id="Appartment" name="Appartment" placeholder="Butas" value="@Model.Appartment">
+                        </div>
+                        <div class="form-group">
+                            <label class="input-name-label">Pašto kodas</label>
+                            <input class="input-details" type="text" id="ZipCode" name="ZipCode" placeholder="Pašto kodas" value="@Model.ZipCode" required>
+                        </div>
+                    </div>
+
+                    <div class="delivery-options fizinis">
+                        <h2>Pasirinkite pristatymo būdą</h2>
+
+                        <div class="switch-box">
+                            <button type="button" id="deliverySelectorA" class="delivery-option" data-target="view-formViewDeliveryA-1" data-delivery-type="Pristatymas į namus">Pristatymas į namus</button>
+                            <button type="button" id="deliverySelectorB" class="delivery-option" data-target="view-formViewDeliveryB-1" data-delivery-type="Atsiimti patiems">Atsiimti patiems</button>
+                        </div>
+
+                        <div id="view-formViewDeliveryA-1" class="delivery-info" style="display: none;">
+                            <div class="free-delivery-box">
+                                <div>
+                                    <p class="free-delivery-text">
+                                        <span class="free-delivery-amount">Pristatymo kaina: 0 €</span><br>
+                                        <span class="free-delivery-condition">Užsakymus, didesnius nei 200 €, pristatome nemokamai.</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="view-formViewDeliveryB-1" class="delivery-info" style="display: none;">
+                            <div class="free-delivery-box" >
+                                <div>
+                                    <p class="free-delivery-text">
+                                        <span class="free-delivery-amount">Prekes atsiimsiu pats</span><br>
+                                        <span class="free-delivery-condition">Adresas + Miestas</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="personal-details">
+                            <label for="register-user">
+                                <input type="checkbox" id="register-user" name="register-user" required>
+                                Patvirtinu, kad sutinku su taisyklėmis
+                            </label>
+                        </div>
+                    </div>
+                </form>
+        </div>
+
+            <div id="view-juridinisAsmuoFormDView" style="display: none;">
+                <form id="formJuridinisAsmuo" action="/checkout/address" method="post">
+                    @Html.AntiForgeryToken()
+
+                    <input type="hidden" id="DeliveryJ" name="Delivery" value="Pristatymas adresu">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="input-name-label">Kodas</label>
+                            <input class="input-details" type="text" id="Code" name="Code" placeholder="Kodas" value="@Model.Code" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="input-name-label">PVM Kodas</label>
+                            <input class="input-details" type="text" id="PVMCode" name="PVMCode" placeholder="PVM Kodas" value="@Model.PVMCode">
+                        </div>
+                        <div class="form-group">
+                            <label class="input-name-label">Pavadinimas</label>
+                            <input class="input-details" type="text" id="CompanyName" name="CompanyName" placeholder="Pavadinimas" value="@Model.CompanyName" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="input-name-label">Šalis</label>
+                            <input class="input-details" type="text" id="Country" name="Country" placeholder="Šalis" value="@Model.Country" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="input-name-label">Savivaldybė</label>
+                            <input class="input-details" type="text" id="Region" name="Region" placeholder="Savivaldybė" value="@Model.Region" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="input-name-label">Miestas</label>
+                            <input class="input-details" type="text" id="City" name="City" placeholder="Miestas" value="@Model.City" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="input-name-label">Gatvė</label>
+                            <input class="input-details" type="text" id="Street" name="Street" placeholder="Gatvė" value="@Model.Street" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="input-name-label">Namas</label>
+                            <input class="input-details" type="text" id="House" name="House" placeholder="Namas" value="@Model.House" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="input-name-label">Butas</label>
+                            <input class="input-details" type="text" id="Appartment" name="Appartment" placeholder="Butas" value="@Model.Appartment">
+                        </div>
+                        <div class="form-group">
+                            <label class="input-name-label">Pašto kodas</label>
+                            <input class="input-details" type="text" id="ZipCode" name="ZipCode" placeholder="Pašto kodas" value="@Model.ZipCode" required>
+                        </div>
+                    </div>
+
+
+                    <h>Atstovaujantis asmuo</h>
+
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="input-name-label">Vardas</label>
+                            <input class="input-details" type="text" id="RecieverName" name="RecieverName" placeholder="Vardas" value="@Model.RecieverName" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="input-name-label">Pavardė</label>
+                            <input class="input-details" type="text" id="RecieverSurname" name="RecieverSurname" placeholder="Pavardė" value="@Model.RecieverSurname" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="input-name-label">El. paštas</label>
+                            <input class="input-details" type="text" id="Email" name="Email" placeholder="El. paštas" value="@Model.Email" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="input-name-label">Telefonas</label>
+                            <input class="input-details" type="text" id="Phone" name="Phone" placeholder="Telefonas" value="@Model.Phone" required>
+                        </div>
+                    </div>
+
+                    <div class="delivery-options juridinis">
+                        <h2>Pasirinkite pristatymo būdą</h2>
+
+                        <div class="switch-box">
+                            <button type="button" id="deliverySelectorA" class="delivery-option" data-target="view-formViewDeliveryA-2" data-delivery-type="Pristatymas į namus">Pristatymas į namus</button>
+                            <button type="button" id="deliverySelectorB" class="delivery-option" data-target="view-formViewDeliveryB-2" data-delivery-type="Atsiimti patiems">Atsiimti patiems</button>
+                        </div>
+
+                        <div id="view-formViewDeliveryA-2" class="delivery-info" style="display: none;">
+                            <div class="free-delivery-box" >
+                                <div>
+                                    <p class="free-delivery-text">
+                                        <span class="free-delivery-amount">Pristatymo kaina: 0 €</span><br>
+                                        <span class="free-delivery-condition">Užsakymus, didesnius nei 200 €, pristatome nemokamai.</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="view-formViewDeliveryB-2" class="delivery-info" style="display: none;">
+                            <div class="free-delivery-box" >
+                                <div>
+                                    <p class="free-delivery-text">
+                                        <span class="free-delivery-amount" >Prekes atsiimsiu pats</span><br>
+                                        <span class="free-delivery-condition" >Adresas + Miestas</span>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="personal-details">
+                        <label for="register-user">
+                            <input type="checkbox" id="register-user" name="register-user" required>
+                            Patvirtinu, kad sutinku su taisyklėmis
+                        </label>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="checkout-container-summary">
+
+                <div class="item-price-details">
+                    <div class="item-detail-container">
+                        <div class="price-detail">
+                            <p id="detail-name">Kaina</p>
+                            <p>€@((ViewBag.Cart.Total).ToString("F2", new CultureInfo("lt-LT")))</p>
+                        </div>
+
+                        <div class="price-detail">
+                            <p id="detail-name">Kaina be PVM</p>
+                            <p>€@((ViewBag.Cart.Total / 100 * 79).ToString("F2", new CultureInfo("lt-LT")))</p>
+                        </div>
+
+                        <div class="price-detail">
+                            <p id="detail-name">PVM (21%)</p>
+                            <p>€@((ViewBag.Cart.Total / 100 * 21).ToString("F2", new CultureInfo("lt-LT")))</p>
+                        </div>
+
+                        @if (ViewBag.Cart.Discount > 0)
+                        {
+                            <div class="price-detail">
+                                <p id="detail-name">Nuolaida</p>
+                                <p>-@ViewBag.Cart.Discount %</p>
+                            </div>
+                        }
+                    </div>
+
+                    <div class="total-price">
+                <h2 class="total-price-h2">Viso: €@((ViewBag.Cart.TotalWithDiscount).ToString("F2", new CultureInfo("lt-LT")))</h2>
+                    </div>
+                    
+                    @if (ViewBag.Cart.Total == 0)
+                    {
+                        <button style="display:none;" id="submit-btn" class="purchase-btn" form="formFizinisAsmuo">Tęsti apsirkimą</button>
+
+                    }
+                    else
+                    {
+                        <button id="submit-btn" class="purchase-btn" form="formFizinisAsmuo">Tęsti apsirkimą</button>
+                    }
+                </div>
+        
+    </div>
+</div>
+
+<script src="~/js/InvalidComponents.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Вешаем обработчик на кнопки доставки
+        document.querySelectorAll('.delivery-option').forEach(button => {
+            button.addEventListener('click', function () {
+                const optionsContainer = this.closest('.delivery-options');
+                const targetId = this.getAttribute('data-target');
+
+                // Убрать активный класс у всех кнопок в текущем контейнере опций
+                optionsContainer.querySelectorAll('.delivery-option').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+
+                // Добавить активный класс к нажатой кнопке
+                this.classList.add('active');
+
+                // Скрыть все блоки информации
+                optionsContainer.querySelectorAll('.delivery-info').forEach(info => {
+                    info.style.display = 'none';
+                });
+
+                // Показать целевой блок информации
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.style.display = 'block';
+                }
+
+                const deliveryType = this.dataset.deliveryType;
+                const hiddenInputId = optionsContainer.classList.contains('fizinis') ? 'DeliveryF' : 'DeliveryJ';
+                document.getElementById(hiddenInputId).value = deliveryType;
+            });
+        });
+
+        // Автоматический клик по кнопке "Pristatymas į namus" для каждого контейнера опций
+        document.querySelectorAll('.delivery-options').forEach(optionsContainer => {
+            const homeDeliveryButton = optionsContainer.querySelector('.delivery-option[data-delivery-type="Pristatymas į namus"]');
+            if (homeDeliveryButton) {
+                homeDeliveryButton.click();
+            }
+        });
+    });
+
+    window.onload = function () {
+        // Вызываем функцию switchView с аргументом, соответствующим Fizinis asmuo
+        switchView('fizinisAsmuoFormDView');
+
+        // Дополнительно выделяем кнопку как активную
+        document.getElementById('btnfiz').classList.add('active');
+    };
+</script>

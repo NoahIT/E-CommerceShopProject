@@ -1,0 +1,20 @@
+﻿.section-container-brand-photo {
+    flex-basis: calc(50% - 10px);
+    margin: 20px 0;
+    padding: 0px;
+    background-color: white;
+    border: none;
+    flex-basis: 300px;
+    border-radius: 5px;
+    margin-block-start: auto;
+    margin-block-end: auto;
+    margin-left: 100px;
+    margin-right: 50px;
+}
+
+.section-container-product-photo {
+    flex-basis: 300px; /* Ширина изображения, можно использовать 'width' если не требуется flexbox-размеры */
+    padding: 0;
+    background-color: white;
+    border-radius: 10px;
+}

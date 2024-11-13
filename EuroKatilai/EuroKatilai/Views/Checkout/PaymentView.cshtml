@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewData["Title"] = "Mokėjimas";
+}
+
+<link rel="stylesheet" href="~/css/PaymentView/paymentView.css" />
+
+@await Html.PartialAsync("offCanvaNavBar")
+
+<div class="payment-options">
+    <div class="tabs">
+        <button class="tab-button" onclick="openTab(event, 'online')">APMOKĖJIMAS INTERNETU</button>
+        <button class="tab-button" onclick="openTab(event, 'cash')">GRYNAISIAIS ARBA KORTELE</button>
+        <button class="tab-button" onclick="openTab(event, 'bank')">BANKINIŲ PAVEDIMŲ</button>
+    </div>
+
+    <div id="online" class="tab-content">
+        <!-- Payment options for online will be here -->
+        <form action="/checkout/billing" method="post">
+            
+            <button>APMOKETI</button>
+        </form>
+    </div>
+
+    <div id="cash" class="tab-content">
+        <p>Atsiimant prekes mūsų salone</p>
+        <p>Už prekes apmokama mūsų salone jų atsiėmimo metu.</p>
+        <form action="/checkout/billing" method="post">
+            
+            <button>APMOKETI</button>
+        </form>
+    </div>
+
+    <div id="bank" class="tab-content">
+        <p>Bankinis pavedimas</p>
+        <p>Paruošime Jums sąskaitą išankstiniam apmokėjimui.</p>
+        <form action="/checkout/billing" method="post">
+
+            <button>APMOKETI</button>
+        </form>
+    </div>
+</div>
+
+<script src="~/js/paymentViewSwitchDisplay.js"></script>

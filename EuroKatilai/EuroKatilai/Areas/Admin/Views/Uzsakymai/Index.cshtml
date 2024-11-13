@@ -1,0 +1,55 @@
+﻿@model EuroKatilai.Areas.Admin.ViewModels.UzsakymaiViewModel
+
+<link rel="stylesheet" href="~/css/Admin/Uzsakymai/adminOrders.css" />
+
+<div class="order-container-admin">
+
+    <strong>Užsakymų valdymas</strong>
+
+    <form action="/admin/uzsakymai/update-status" method="post">
+        <input placeholder="Užsakymo ID" type="number" value="" name="OrderId"/>
+        <input placeholder="Address ID" type="number" value="" name="addressId" />
+        <input placeholder="Užsakymo statusas" type="text" name="status"/>
+        <button>Pakeisti užsakymo statusa pagal ID</button>
+    </form>
+
+    <table>
+        <thead>
+        <tr>
+            <th>OrderID</th>
+            <th>UserID</th>
+            <th>AddressID</th>
+            <th>Created</th>
+            <th>Modified</th>
+            <th>Status</th>
+            <th>Discount</th>
+        </tr>
+        </thead>
+        <tbody>
+        @foreach (var item in Model.orders)
+        {
+            <tr>
+                <td>@item.OrderId</td>
+                <td>@item.UserId</td>
+                <td>@item.AddressId</td>
+                <td>@item.Created</td>
+                <td>@item.Modified</td>
+                <td>@item.Status</td>
+                <td>@item.Discount</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+
+@*   -----------------------  nuo cia ideti adreso inputai kaip kas atrodys daug maz nu kol logikos ner *@
+
+    <div class="locate-adress-container">
+        <form action="/admin/uzsakymai/find-address" method="post">
+            <input placeholder="Addreso ID" type="number" value="" name="addressId" />
+            <button>Surasti adresą pagal ID</button>
+        </form>
+
+        <label>@Model.address</label>
+    </div>
+    
+</div>

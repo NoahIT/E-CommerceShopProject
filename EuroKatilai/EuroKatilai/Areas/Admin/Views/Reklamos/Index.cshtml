@@ -1,0 +1,26 @@
+﻿@model List<DAL.Models.Adds>
+
+<link rel="stylesheet" href="~/css/Admin/Reklamos/adminPromo.css" />
+
+<div class="promo-container">
+
+    <strong>Reklamų valdymas</strong>
+
+    <form enctype="multipart/form-data" action="/admin/reklama/add-new-promo-photo" method="post">
+        <input type="file" name="photo" />
+        <button>Pridėti naują reklamos nuotrauką</button>
+    </form>
+    <form action="/admin/reklama/delete-reklama" method="post">
+        <input placeholder="Nuotraukos ID" type="number" name="idReklama" />
+        <button>Ištrinti esamą nuotrauką pagal ID</button>
+    </form>
+
+    @foreach (var add in Model)
+    { 
+        <div class="admin-promo-row">
+            <label>Nuotraukos ID: @add.idReklama</label>
+            <img src="@Url.Content("~/" + add.Photo)" alt="@add.Name">
+        </div>
+    }
+
+</div>

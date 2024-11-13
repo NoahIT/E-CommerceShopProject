@@ -1,0 +1,22 @@
+﻿.mini-navbars {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #8a172c;
+    color: white;
+    font-weight: 400;
+    text-align: center;
+    padding: 5px;
+    font-size: 0.85em;
+    z-index: 999;
+    font-family: 'Montserrat', sans-serif;
+    transition: bottom 0.5s ease;
+}
+
+.mini-bot-nav {
+    top: 108px;
+}
+
+.hide-mini-header {
+    display: none;
+}

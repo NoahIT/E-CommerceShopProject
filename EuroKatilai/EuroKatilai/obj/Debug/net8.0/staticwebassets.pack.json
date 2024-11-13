@@ -1,0 +1,625 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\eurokatilai.bundle.scp.css",
+      "PackagePath": "staticwebassets\\eurokatilai.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\Images\\036search_100009.png",
+      "PackagePath": "staticwebassets\\Images\\036search_100009.png"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\Images\\05\\05E3\\LaikinasKatilas.jpg",
+      "PackagePath": "staticwebassets\\Images\\05\\05E3\\LaikinasKatilas.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\Images\\07\\07AB\\avatars-000728167429-sfy82u-original.jpg",
+      "PackagePath": "staticwebassets\\Images\\07\\07AB\\avatars-000728167429-sfy82u-original.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\Images\\17\\17A1\\BrinkLogo.jpg",
+      "PackagePath": "staticwebassets\\Images\\17\\17A1\\BrinkLogo.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\Images\\27\\2741\\036search_100009.jpg",
+      "PackagePath": "staticwebassets\\Images\\27\\2741\\036search_100009.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\Images\\3E\\3E7B\\bmw-i8-1-5-l-kabrioletas-2019-benzinas-elektra-0.jpg",
+      "PackagePath": "staticwebassets\\Images\\3E\\3E7B\\bmw-i8-1-5-l-kabrioletas-2019-benzinas-elektra-0.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\Images\\41\\41B5\\images.jpg",
+      "PackagePath": "staticwebassets\\Images\\41\\41B5\\images.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\Images\\A_Admin\\HomePageIcons\\orderItems.png",
+      "PackagePath": "staticwebassets\\Images\\A_Admin\\HomePageIcons\\orderItems.png"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\Images\\A_Admin\\HomePageIcons\\productTable.png",
+      "PackagePath": "staticwebassets\\Images\\A_Admin\\HomePageIcons\\productTable.png"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\Images\\A_Admin\\HomePageIcons\\produktas.png",
+      "PackagePath": "staticwebassets\\Images\\A_Admin\\HomePageIcons\\produktas.png"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\Images\\A_Admin\\HomePageIcons\\reklama.png",
+      "PackagePath": "staticwebassets\\Images\\A_Admin\\HomePageIcons\\reklama.png"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\Images\\A_Admin\\HomePageIcons\\uzsakymas.png",
+      "PackagePath": "staticwebassets\\Images\\A_Admin\\HomePageIcons\\uzsakymas.png"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\Images\\BG1RED.jpg",
+      "PackagePath": "staticwebassets\\Images\\BG1RED.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\Images\\BrandLogos\\AlphaInnotecLogo.png",
+      "PackagePath": "staticwebassets\\Images\\BrandLogos\\AlphaInnotecLogo.png"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\Images\\BrandLogos\\AristonLogo.png",
+      "PackagePath": "staticwebassets\\Images\\BrandLogos\\AristonLogo.png"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\Images\\BrandLogos\\BoshLogo.png",
+      "PackagePath": "staticwebassets\\Images\\BrandLogos\\BoshLogo.png"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\Images\\BrandLogos\\BrinkLogo.png",
+      "PackagePath": "staticwebassets\\Images\\BrandLogos\\BrinkLogo.png"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\Images\\BrandLogos\\BuderusLogo.png",
+      "PackagePath": "staticwebassets\\Images\\BrandLogos\\BuderusLogo.png"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\Images\\BrandLogos\\ViessmannLogo.png",
+      "PackagePath": "staticwebassets\\Images\\BrandLogos\\ViessmannLogo.png"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\Images\\ContactsIcons\\facebook.png",
+      "PackagePath": "staticwebassets\\Images\\ContactsIcons\\facebook.png"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\Images\\ContactsIcons\\gmail.png",
+      "PackagePath": "staticwebassets\\Images\\ContactsIcons\\gmail.png"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\Images\\ContactsIcons\\instagram.png",
+      "PackagePath": "staticwebassets\\Images\\ContactsIcons\\instagram.png"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\Images\\ContactsIcons\\phone-call.png",
+      "PackagePath": "staticwebassets\\Images\\ContactsIcons\\phone-call.png"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\Images\\ContactsIcons\\telegram.png",
+      "PackagePath": "staticwebassets\\Images\\ContactsIcons\\telegram.png"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\Images\\D5\\D572\\instagram.jpg",
+      "PackagePath": "staticwebassets\\Images\\D5\\D572\\instagram.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\Images\\E9\\E957\\Screenshot 2024-01-03 000829.jpg",
+      "PackagePath": "staticwebassets\\Images\\E9\\E957\\Screenshot 2024-01-03 000829.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\Images\\E9\\E957\\Screenshot 2024-01-03 000829.png",
+      "PackagePath": "staticwebassets\\Images\\E9\\E957\\Screenshot 2024-01-03 000829.png"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\Images\\EK_LogoF.png",
+      "PackagePath": "staticwebassets\\Images\\EK_LogoF.png"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\Images\\LaikinasKatilas.png",
+      "PackagePath": "staticwebassets\\Images\\LaikinasKatilas.png"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\Images\\Reklamos\\ReklamosPavyzdys1.jpg",
+      "PackagePath": "staticwebassets\\Images\\Reklamos\\ReklamosPavyzdys1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\Images\\Reklamos\\ReklamosPavyzdys2.jpg",
+      "PackagePath": "staticwebassets\\Images\\Reklamos\\ReklamosPavyzdys2.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\Images\\Reklamos\\ReklamosPavyzdys3.jpg",
+      "PackagePath": "staticwebassets\\Images\\Reklamos\\ReklamosPavyzdys3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\Images\\Search_Icon.png",
+      "PackagePath": "staticwebassets\\Images\\Search_Icon.png"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\Images\\montavimoP.jpg",
+      "PackagePath": "staticwebassets\\Images\\montavimoP.jpg"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\css\\Admin\\HomePage\\adminHome.css",
+      "PackagePath": "staticwebassets\\css\\Admin\\HomePage\\adminHome.css"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\css\\Admin\\Nav\\adminNavBar.css",
+      "PackagePath": "staticwebassets\\css\\Admin\\Nav\\adminNavBar.css"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\css\\Admin\\OrderItems\\orderItems.css",
+      "PackagePath": "staticwebassets\\css\\Admin\\OrderItems\\orderItems.css"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\css\\Admin\\ProductTables\\productTables.css",
+      "PackagePath": "staticwebassets\\css\\Admin\\ProductTables\\productTables.css"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\css\\Admin\\Produktai\\Series\\updateProductSeries.css",
+      "PackagePath": "staticwebassets\\css\\Admin\\Produktai\\Series\\updateProductSeries.css"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\css\\Admin\\Produktai\\Series\\updateProductSeriesInputs.css",
+      "PackagePath": "staticwebassets\\css\\Admin\\Produktai\\Series\\updateProductSeriesInputs.css"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\css\\Admin\\Produktai\\addProduct.css",
+      "PackagePath": "staticwebassets\\css\\Admin\\Produktai\\addProduct.css"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\css\\Admin\\Produktai\\adminProducts.css",
+      "PackagePath": "staticwebassets\\css\\Admin\\Produktai\\adminProducts.css"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\css\\Admin\\Produktai\\updateProduct.css",
+      "PackagePath": "staticwebassets\\css\\Admin\\Produktai\\updateProduct.css"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\css\\Admin\\Reklamos\\adminPromo.css",
+      "PackagePath": "staticwebassets\\css\\Admin\\Reklamos\\adminPromo.css"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\css\\Admin\\Uzsakymai\\adminOrders.css",
+      "PackagePath": "staticwebassets\\css\\Admin\\Uzsakymai\\adminOrders.css"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\css\\BodyBg\\bodyBg.css",
+      "PackagePath": "staticwebassets\\css\\BodyBg\\bodyBg.css"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\css\\BrandView\\brandView.css",
+      "PackagePath": "staticwebassets\\css\\BrandView\\brandView.css"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\css\\Breadcrumbs\\breadcrumbs.css",
+      "PackagePath": "staticwebassets\\css\\Breadcrumbs\\breadcrumbs.css"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\css\\ChatBot\\chatBot.css",
+      "PackagePath": "staticwebassets\\css\\ChatBot\\chatBot.css"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\css\\Contacts\\contacts.css",
+      "PackagePath": "staticwebassets\\css\\Contacts\\contacts.css"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\css\\Footer\\footer.css",
+      "PackagePath": "staticwebassets\\css\\Footer\\footer.css"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\css\\Forms\\forms.css",
+      "PackagePath": "staticwebassets\\css\\Forms\\forms.css"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\css\\NavBar\\miniNavBars.css",
+      "PackagePath": "staticwebassets\\css\\NavBar\\miniNavBars.css"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\css\\NavBar\\navBar.css",
+      "PackagePath": "staticwebassets\\css\\NavBar\\navBar.css"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\css\\NavBar\\navBarDropdown.css",
+      "PackagePath": "staticwebassets\\css\\NavBar\\navBarDropdown.css"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\css\\OffCanva\\offCanva.css",
+      "PackagePath": "staticwebassets\\css\\OffCanva\\offCanva.css"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\css\\PaymentDetails\\paymentDetails.css",
+      "PackagePath": "staticwebassets\\css\\PaymentDetails\\paymentDetails.css"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\css\\PaymentDetails\\paymentSummary.css",
+      "PackagePath": "staticwebassets\\css\\PaymentDetails\\paymentSummary.css"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\css\\PaymentView\\paymentView.css",
+      "PackagePath": "staticwebassets\\css\\PaymentView\\paymentView.css"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\css\\ProductView\\productView.css",
+      "PackagePath": "staticwebassets\\css\\ProductView\\productView.css"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\css\\Profile\\profile.css",
+      "PackagePath": "staticwebassets\\css\\Profile\\profile.css"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\css\\PromoSlide\\promoSlide.css",
+      "PackagePath": "staticwebassets\\css\\PromoSlide\\promoSlide.css"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\css\\Search\\SearchNotFound.css",
+      "PackagePath": "staticwebassets\\css\\Search\\SearchNotFound.css"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\css\\Search\\search.css",
+      "PackagePath": "staticwebassets\\css\\Search\\search.css"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\css\\Sections\\sectionBoxes.css",
+      "PackagePath": "staticwebassets\\css\\Sections\\sectionBoxes.css"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\css\\Sections\\sectionsButtons.css",
+      "PackagePath": "staticwebassets\\css\\Sections\\sectionsButtons.css"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\css\\Sections\\sectionsOverflow.css",
+      "PackagePath": "staticwebassets\\css\\Sections\\sectionsOverflow.css"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\css\\Sections\\sectionsPhoto.css",
+      "PackagePath": "staticwebassets\\css\\Sections\\sectionsPhoto.css"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\css\\Sections\\sectionsText.css",
+      "PackagePath": "staticwebassets\\css\\Sections\\sectionsText.css"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\css\\invalidComp\\invalidCss.css",
+      "PackagePath": "staticwebassets\\css\\invalidComp\\invalidCss.css"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\css\\shoppingCart\\emptyCart.css",
+      "PackagePath": "staticwebassets\\css\\shoppingCart\\emptyCart.css"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\css\\shoppingCart\\shoppingCart.css",
+      "PackagePath": "staticwebassets\\css\\shoppingCart\\shoppingCart.css"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\css\\shoppingCart\\shoppingCartAlign.css",
+      "PackagePath": "staticwebassets\\css\\shoppingCart\\shoppingCartAlign.css"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\css\\shoppingCart\\shoppingCartButtons.css",
+      "PackagePath": "staticwebassets\\css\\shoppingCart\\shoppingCartButtons.css"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\css\\siteAdmin.css",
+      "PackagePath": "staticwebassets\\css\\siteAdmin.css"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\js\\InvalidComponents.js",
+      "PackagePath": "staticwebassets\\js\\InvalidComponents.js"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\js\\changingTextNavBarDisplay.js",
+      "PackagePath": "staticwebassets\\js\\changingTextNavBarDisplay.js"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\js\\chatBot.js",
+      "PackagePath": "staticwebassets\\js\\chatBot.js"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\js\\gamintojuNuotraukosDisplay.js",
+      "PackagePath": "staticwebassets\\js\\gamintojuNuotraukosDisplay.js"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\js\\miniNavBarDisplay.js",
+      "PackagePath": "staticwebassets\\js\\miniNavBarDisplay.js"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\js\\paymentDetailsDeliveryDisplay.js",
+      "PackagePath": "staticwebassets\\js\\paymentDetailsDeliveryDisplay.js"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\js\\paymentFormSwitchView.js",
+      "PackagePath": "staticwebassets\\js\\paymentFormSwitchView.js"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\js\\paymentViewSwitchDisplay.js",
+      "PackagePath": "staticwebassets\\js\\paymentViewSwitchDisplay.js"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\js\\profileSwitchView.js",
+      "PackagePath": "staticwebassets\\js\\profileSwitchView.js"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\js\\promoBannerDisplay.js",
+      "PackagePath": "staticwebassets\\js\\promoBannerDisplay.js"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\js\\queryMontavimo.js",
+      "PackagePath": "staticwebassets\\js\\queryMontavimo.js"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\js\\registerFromSwitchView.js",
+      "PackagePath": "staticwebassets\\js\\registerFromSwitchView.js"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\js\\registerFromSwitchViewDelivery.js",
+      "PackagePath": "staticwebassets\\js\\registerFromSwitchViewDelivery.js"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\js\\search.js",
+      "PackagePath": "staticwebassets\\js\\search.js"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\js\\searchBarDisplay.js",
+      "PackagePath": "staticwebassets\\js\\searchBarDisplay.js"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "C:\\Users\\rasci\\Storage\\Freelancing\\Eurokatilai\\EuroKatilai\\EuroKatilai\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.eurokatilai.props",
+      "PackagePath": "build\\eurokatilai.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.eurokatilai.props",
+      "PackagePath": "buildMultiTargeting\\eurokatilai.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.eurokatilai.props",
+      "PackagePath": "buildTransitive\\eurokatilai.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.eurokatilai.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

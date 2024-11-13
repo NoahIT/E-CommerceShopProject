@@ -1,0 +1,53 @@
+﻿.purchase-btn, .apply-btn {
+    width: 100%;
+    padding: 10px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+.remove-discount-btn{
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    background: white;
+    color: red;
+}
+
+.purchase-btn {
+    background-color: #9c142d;
+}
+
+.apply-btn {
+    background-color: #00b300;
+}
+
+.remove-btn {
+    padding: 10px;
+    color: red;
+    border: none;
+    background-color: white;
+    font-size: 15px;
+}
+
+button:hover {
+    opacity: 0.7;
+}
+
+.update-btn {
+    background-color: #9c142d;
+    width: 50%;
+    padding: 10px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
+
+.apply-btn {
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Match the button color to the first image */
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 15px;
+    font-size: 13px;
+}

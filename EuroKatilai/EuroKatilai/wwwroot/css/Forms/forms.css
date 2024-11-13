@@ -1,0 +1,247 @@
+﻿/* Basic reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+.form-container {
+    max-width: 500px; /* Set a max-width for larger screens */
+    width: 100%; /* Make it responsive */
+    margin: 2% auto; /* Center the form with margin auto */
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    min-height: 500px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+.form-container-login {
+    max-width: 500px; /* Set a max-width for larger screens */
+    width: 100%; /* Make it responsive */
+    margin: 2% auto; /* Center the form with margin auto */
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    height: auto;
+    border: 1px solid #ccc;
+}
+
+.checkbox-inline {
+    display: flex;
+    align-items: center; /* Align items vertically */
+    justify-content: flex-start; /* Align items to the start of the container */
+    font-size: 18px; /* This font size can be adjusted as needed */
+    color: #9c142d; /* Color of the text */
+    font-weight: 500; /* Weight of the font */
+}
+
+.checkbox-inline input[type="checkbox"] {
+  margin-right: -190px; /* Add some space between the checkbox and the label text */
+  /* Remove negative margins */
+  margin-left: -190px;
+  margin-top: 20px;
+}
+
+.switch-box {
+    display: flex;
+    background: black;
+    border: none; /* Adjust the color as needed */
+    border-radius: 5px;
+    overflow: hidden; /* Ensures the child elements' border-radius is contained within the parent's */
+    margin-bottom: 20px;
+    border: 1px solid #9c142d; /* Space between switch-box and form */
+}
+
+.switch-box button {
+  flex: 1; /* Distribute space evenly */
+  background-color: #fff; /* Non-active tab color */
+  color: #9c142d; /* Text color */
+  padding: 10px 15px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Active tab style */
+    .switch-box button.active {
+        background-color: #9c142d; /* Active tab color */
+        /*border-bottom: 2px solid #000000; */ /* Adjust the color to match your form design */
+        color: white; /* Adjust the text color as needed */
+    }
+
+
+/* Hover effect for tabs */
+.switch-box button:hover {
+  background-color: #9c142d; /* Lighter shade for hover */
+}
+
+p {
+  text-align: center; /* Center the text */
+  margin-top: 10px; /* Add space above the text */
+  font-size: 18px; /* Adjust font size as needed */
+  color: #000; /* Adjust the color as needed, perhaps to match your form */
+}
+
+p a {
+  color: #9c142d; /* Use a distinctive color for the link for visibility */
+  text-decoration: none; /* Option to remove underline from links */
+}
+
+p a:hover {
+  text-decoration: underline; /* Add underline on hover for better user experience */
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 10px; /* Reduce gap between columns if needed */
+    margin-bottom: 10px; /* Reduce space between rows */
+}
+
+/* Last column should not have margin on the right */
+.form-column:last-child {
+   margin-right: 0;
+}
+
+.register-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: normal; /* Center the button */
+    min-height: 400px;
+}
+
+.juridinis-name{
+    font-size: 30px;
+}
+
+#regAlignChk {
+    margin-top: -25px;
+    margin-bottom: -25px;
+}
+
+#regAlignChk input {
+    margin-left: -150px;
+}
+
+#regAlignChk label{
+    display: flex;
+    justify-content: center;
+    margin-left: 100px;
+    width: 500px;
+}
+
+h2 {
+    color: #9c142d;
+    margin-bottom: 20px;
+    text-align: center; /* Center align the header */
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 20px; /* Add space between input fields */
+    margin: 0; /* Remove any margin from .form-group if it has */
+    padding: 0; /* Remove any padding from .form-group if it has */
+}
+
+.form-label {
+    position: absolute;
+    left: 20px; /* Align the label inside the input */
+    top: 35px; /* Position the label correctly */
+    padding: 0 5px;
+    background-color: white; /* Ensure the background matches */
+    transition: all 0.3s ease;
+    color: #555; /* A softer color for the label */
+}
+
+.full-width {
+    grid-column: 1 / -1; /* This will make the input span from the first to the last column */
+}
+
+input {
+    width: calc(100% - 30px); /* Consider the padding and border */
+    border: 2px solid #ddd;
+    border-radius: 0px;
+    padding: 15px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    font-size: 18px; /* Larger font size for readability */
+    margin-bottom: 20px; /* Space between inputs */
+}
+
+.form-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    min-height: 10vh; /* Adjust height to make form more centered */
+}
+
+input:focus {
+    border-color: #e74c3c;
+}
+
+input:focus + .form-label,
+input:not(:placeholder-shown) + .form-label {
+    top: -15px; 
+    left: 15px;
+    font-size: 14px;  
+    color: #9c142d;
+    font-weight: 500;
+}
+
+
+
+/* Adjust the width of input fields */
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%; /* Full width of the container */
+    padding: 15px; /* Adjust padding as needed */
+    margin-bottom: 15px; /* Provide some space below each input */
+}
+
+.submit-btn {
+    background-color: #9c142d; /* Match the color of the REGISTRUOTIS button */
+    color: white;
+    border: none; /* Assuming there is no border */
+    padding: 15px 20px; /* Adjust to match the REGISTRUOTIS button */
+    cursor: pointer;
+    border-radius: 5px; /* Adjust to match the REGISTRUOTIS button */
+    font-size: 16px; /* Adjust to match the REGISTRUOTIS button */
+    text-transform: uppercase;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    margin-top: 20px;
+    text-decoration: none;
+    display: inline-block; /* or block depending on your layout */
+    text-align: center;
+    width: 100%; /* if you want it to be full width like a block element */
+    box-shadow: none; /* Assuming there is no box-shadow */
+    /* If the REGISTRUOTIS button has a box-shadow, add it here */
+}
+
+.submit-btn:hover {
+    background-color: #c0392b;
+    color: white;
+}
+
+.input, .submit-btn {
+    width: 100%; /* Make the input fields and button take up full width of the form container */
+}
+
+/* Adjust padding and font-size for better appearance */
+input, .submit-btn {
+    padding: 20px; /* Increased padding for a taller appearance */
+    font-size: 16px; /* Adjust font-size if necessary */
+}
+
+/* You may want to adjust the border-radius to keep the design consistent */
+input, .submit-btn {
+    border-radius: 15px; /* Example of a consistent border-radius */
+}

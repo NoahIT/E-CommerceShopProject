@@ -1,0 +1,127 @@
+﻿@model ProfileViewModel
+
+@{
+    ViewData["Title"] = "Profilis";
+}
+
+<link rel="stylesheet" href="~/css/OffCanva/offCanva.css" />
+<link rel="stylesheet" href="~/css/Profile/profile.css" />
+<link rel="stylesheet" href="~/css/Breadcrumbs/breadcrumbs.css" />
+<link rel="stylesheet" href="~/css/Forms/forms.css" />
+
+@await Html.PartialAsync("offCanvaNavBar")
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Pradžia</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Profilis</li>
+    </ol>
+</nav>
+
+<div class="profile-container">
+    <div class="profile-side-panel">
+        <div class="side-panel">
+            <a asp-controller="Profile" asp-action="Index" asp-route-tab="my-profile">
+                <button type="button" id="profile_link" style="background-color: #9c142d; color: white;">Mano Profilis</button>
+            </a>
+            <a asp-controller="Profile" asp-action="Index" asp-route-tab="my-orders">
+                <button type="button" id="orders_link">Mano užsakymai</button>
+            </a>
+            <a asp-controller="Profile" asp-action="Index" asp-route-tab="change-password">
+                <button type="button" id="password_link">Slaptažodžio keitimas</button>
+            </a>
+            <a asp-controller="Profile" asp-action="Index" asp-route-tab="remove-profile">
+                <button type="button" id="delete_link">Pašalinti paskyrą</button>
+            </a>
+
+            <a href="/profile/logout"> <button type="button" id="logout_link">Atsijungti</button></a>
+
+        </div>
+    </div>
+
+    <div class="profile-content-panel">
+        <div class="profile-content">
+            <h1>Mano profilis</h1>
+
+            <form class="profile-form" action="/profile/update" method="post">
+                <input type="hidden" name="ProfileId" value="@Model.ProfileId" />
+                <input type="hidden" name="AddressId" value="@Model.AddressId" />
+                <input type="hidden" name="Email" value="@Model.Email" />
+                <input type="hidden" name="Phone" value="@Model.Phone" />
+                @Html.AntiForgeryToken()
+                
+                
+
+                <div class="form-field">
+                    <label class="form-label">Vardas</label>
+                    <input class="form-input" name="RecieverName" type="text" placeholder="Vardas" value="@Model.RecieverName" required />
+                </div>
+
+                <div class="form-field">
+                    <label class="form-label">Pavardė</label>
+                    <input class="form-input" name="RecieverSurname" type="text" placeholder="Pavardė" value="@Model.RecieverSurname" required />
+                </div>
+
+                <div class="form-field">
+                    <label class="form-label">Šalis</label>
+                    <input class="form-input" name="Country" type="text" placeholder="Šalis" value="@Model.Country" required />
+                </div>
+
+                <div class="form-field">
+                    <label class="form-label">Miestas</label>
+                    <input class="form-input" name="City" type="text" placeholder="Miestas" value="@Model.City" required />
+                </div>
+
+                <div class="form-field">
+                    <label class="form-label">Apskritis</label>
+                    <input class="form-input" name="Region" type="text" placeholder="Apskritis" value="@Model.Region" required />
+                </div>
+                
+                <div class="form-field">
+                    <label class="form-label">Gatvė</label>
+                    <input class="form-input" name="Street" type="text" placeholder="Gatvė" value="@Model.Street" required />
+                </div>
+
+                <div class="form-field">
+                    <label class="form-label">Namo numeris</label>
+                    <input class="form-input" name="House" type="text" placeholder="Namo numeris" value="@Model.House" required />
+                </div>
+
+                <div class="form-field">
+                    <label class="form-label">Buto numeris</label>
+                    <input class="form-input" name="Appartment" type="text" placeholder="Buto numeris" value="@Model.Appartment" required />
+                </div>
+
+                <div class="form-field">
+                    <label class="form-label">Pašto kodas</label>
+                    <input class="form-input" name="ZipCode" type="text" placeholder="Pašto kodas" value="@Model.ZipCode" required />
+                </div>
+                
+                @if (Model.PVMCode != "" && Model.CompanyName != "")
+                {
+                    <div class="form-field">
+                        <label class="form-label">PVM kodas</label>
+                        <input class="form-input" name="PVMCode" type="text" placeholder="PVM kodas" value="@Model.PVMCode" required />
+                    </div>
+
+                    <div class="form-field">
+                        <label class="form-label">Kodas</label>
+                        <input class="form-input" name="Code" type="text" placeholder="Kodas" value="@Model.Code" required />
+                    </div>
+
+                    <div class="form-field">
+                        <label class="form-label">Įmones pavadinimas</label>
+                        <input class="form-input" name="ComapnyName" type="text" placeholder="Įmones pavadinimas" value="@Model.CompanyName" required />
+                    </div>
+                }
+
+                <button class="form-button">Išsaugoti</button>
+            </form>
+        </div>
+    </div>
+
+    
+</div>
+
+@* <script src="~/js/profileSwitchView.js"></script> *@
+<script src="~/js/InvalidComponents.js"></script>

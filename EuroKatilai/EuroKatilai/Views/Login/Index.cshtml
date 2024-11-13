@@ -1,0 +1,55 @@
+﻿@model LoginViewModel
+
+@{
+    ViewData["Title"] = "Autorizacija";
+}
+
+<link rel="stylesheet" href="~/css/Footer/footer.css" />
+
+<link rel="stylesheet" href="~/css/Forms/forms.css" />
+
+<link rel="stylesheet" href="~/css/NavBar/miniNavBars.css" />
+<link rel="stylesheet" href="~/css/NavBar/navBar.css" />
+<link rel="stylesheet" href="~/css/NavBar/navBarDropdown.css" />
+
+<link rel="stylesheet" href="~/css/OffCanva/offCanva.css" />
+
+<link rel="stylesheet" href="~/css/PromoSlide/promoSlide.css" />
+
+<link rel="stylesheet" href="~/css/Sections/sectionBoxes.css" />
+<link rel="stylesheet" href="~/css/Sections/sectionsButtons.css" />
+<link rel="stylesheet" href="~/css/Sections/sectionsOverflow.css" />
+<link rel="stylesheet" href="~/css/Sections/sectionsPhoto.css" />
+<link rel="stylesheet" href="~/css/Sections/sectionsText.css" />
+
+@await Html.PartialAsync("offCanvaNavBar")
+
+<div class="form-container-login" style=" background-size: cover; background-position: center;  background-repeat: no-repeat; margin-top: 100px;">
+    <form action="/login" method="post">
+        @Html.AntiForgeryToken()
+        @Html.ValidationSummary()
+        <h2 class="login-margin-name">Prisijungti</h2>
+        <div class="form-row">
+            <div class="form-group full-width">
+                <input type="text" id="Email" name="Email" class="input" value="@Model.Email" />
+                <label for="Email" class="form-label">El. paštas</label>
+                <div class="error">@Html.ValidationMessageFor(m => m.Email)</div>
+            </div>
+        </div>
+        <div class="form-row">
+            <div class="form-group full-width">
+                <input type="password" id="Password" name="Password" class="input" />
+                <label for="Password" class="form-label">Slaptažodis</label>
+                <div class="error">@Html.ValidationMessageFor(m => m.Password)</div>
+            </div>
+        </div>
+
+        <div class="checkbox-inline">
+            <input type="checkbox" name="RememberMe" value="true" id="rememberMe">
+            <label for="rememberMe">Prisiminti prisijungimą</label>
+        </div>
+        
+        <button type="submit" class="submit-btn">Prisijungti</button>
+        <p>Neturiu paskyros, <a href="/register">registruotis</a>.</p>
+    </form>
+</div>

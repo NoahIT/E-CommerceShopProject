@@ -1,0 +1,83 @@
+﻿.order-container-admin{
+    border: 1px solid lightgray;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.order-container-admin strong{
+    display: flex;
+    justify-content:center;
+    margin-bottom: 20px;
+    font-size: 20px;
+    border-bottom: 2px solid tomato;
+    text-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    border: 5px solid #404040;
+}
+
+thead tr {
+    background-color: #404040;
+    color: #ffffff;
+    text-align: left;
+}
+
+th, td {
+    padding: 12px 15px;
+}
+
+tbody tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+    tbody tr:nth-of-type(even) {
+        background-color: #f3f3f3;
+    }
+
+    tbody tr:last-of-type {
+        border-bottom: 2px solid #404040;
+    }
+
+.order-container-admin form {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    border: 2px solid white;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 1px 15px -10px black;
+}
+
+.order-container-admin form button{
+    border-radius: 10px;
+    border: 1px solid lightgray;
+    background-color: #e6e6e6;
+}
+
+.order-container-admin form button:hover{
+    border: 1px solid tomato;
+}
+
+.order-container-admin form input[type="text"]{
+    border-radius: 10px;
+    border: 1px solid lightgray;
+    height: 35px;
+}
+
+.locate-adress-container label{
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+    font-weight: 500;
+    color: red;
+}

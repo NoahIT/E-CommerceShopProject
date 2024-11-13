@@ -1,0 +1,39 @@
+﻿@model bool
+
+@{
+    ViewData["Title"] = "Kontaktai";
+}
+
+
+<link rel="stylesheet" href="~/css/contacts/contacts.css" />
+
+@await Html.PartialAsync("offCanvaNavBar")
+
+<div class="contact-container">
+
+    <label>Kontaktai</label>
+
+    <div class="contact-socials-container-a">
+        <div class="contact-phone">
+            <img class="social-img-a" src="~/Images/ContactsIcons/phone-call.png" />
+            +370 XXXX XXXX
+        </div>
+
+        <div class="contact-email">
+            <img class="social-img-a" src="~/Images/ContactsIcons/gmail.png" />
+            info@eurokatilai.lt
+        </div>
+    </div>
+
+    <div class="contact-socials-container-b">
+        <div class="social-ig">
+            <img class="social-img" src="~/Images/ContactsIcons/instagram.png" />
+        </div>
+        <div class="social-tg">
+            <img class="social-img" src="~/Images/ContactsIcons/telegram.png" />
+        </div>
+        <div class="social-fb">
+            <img class="social-img" src="~/Images/ContactsIcons/facebook.png" />
+        </div>
+    </div>
+</div>

@@ -1,0 +1,22 @@
+﻿@model IEnumerable<DAL.Models.QuickSearchModel>
+
+<link rel="stylesheet" href="~/css/Search/SearchNotFound.css" />
+
+@if (Model != null && Model.Any())
+{
+    foreach (var item in Model)
+    {
+        <ul>
+            <div>
+                <a href="products/@item.SeriesId">
+                    <img src="@Url.Content("~/" + item.Photo)"/>
+                    <label>@item.BrandName @item.SeriesName @item.ModelName <b> @item.Price €</b></label>
+                </a>
+            </div>
+        </ul>
+    }
+}
+else
+{
+    <div id="searchNotFound">No results found.</div>
+}

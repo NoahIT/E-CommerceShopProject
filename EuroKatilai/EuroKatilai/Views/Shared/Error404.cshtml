@@ -1,0 +1,10 @@
+﻿@{
+    ViewBag.Title = "404 Not Found";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@await Html.PartialAsync("offCanvaNavBar")
+
+<h2 style="margin-top: 100px;">404 - Page not found</h2>
+<p>The page you are looking for might have been removed, had its name changed, or is temporarily unavailable.</p>
+<p><a href="@Url.Action("Index", "Home")">Return to Home Page</a></p>

@@ -1,0 +1,134 @@
+﻿@using System.Globalization
+@model BL.Models.UserCartModel
+
+@{
+
+    ViewData["Title"] = "Pirkiniu_krepselis";
+    int index = 0;
+}
+
+<link rel="stylesheet" href="~/css/shoppingCart/shoppingCart.css" />
+<link rel="stylesheet" href="~/css/shoppingCart/shoppingCartButtons.css" />
+<link rel="stylesheet" href="~/css/shoppingCart/shoppingCartAlign.css" />
+
+<link rel="stylesheet" href="~/css/Breadcrumbs/breadcrumbs.css" />
+<link rel="stylesheet" href="~/css/BodyBg/bodyBg.css" />
+
+@await Html.PartialAsync("offCanvaNavBar")
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Pradžia</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Pirkinių krepšelis</li>
+    </ol>
+</nav>
+
+<div class="bg-body-vw" style="border-radius: 10px; margin: auto; box-shadow: 0px 1px 25px -10px black; padding: 10px; margin-top: 50px;">
+
+    <div class="cart-section">
+        <div class="cart-section-left">
+            <div class="heading-row">
+                <span class="heading">Pavadinimas</span>
+                <span class="heading">Kiekis</span>
+                <span class="heading">Kaina</span>
+                <span class="heading">Suma</span>
+            </div>
+
+            @if (Model.Items != null && Model.Items.Count > 0)
+            {
+                @foreach (var product in Model.Items)
+                {
+                    <div class="product-row">
+
+                        <div class="product-details">
+                            <img src="@Url.Content("~/" + product.Photo)" alt="Stove">
+                            <span class="product-title">@product.SeriesName @product.Model</span>
+                        </div>
+
+
+                        <form id="updateCartForm-@product.ProductId" action="/cart/update" method="post">
+                            @Html.AntiForgeryToken()
+                            <input type="hidden" name="productId" value="@product.ProductId" />
+                            <input type="number" class="quantity-input" min="0" name="ProductCount" value="@product.ProductCount" style="width:130px; text-align:center" onchange="document.getElementById('updateCartForm-' + @product.ProductId).submit();" />
+                        </form>
+
+                        <div class="price-container">
+                            @* <span class="discount-price">657 €</span> *@
+                            <span class="final-price">@product.Price €</span>
+                        </div>
+
+                        <div class="total-container">
+                            <span class="total-price">@(product.Price * product.ProductCount) €</span>
+                        </div>
+                    </div>
+                    <form action="/cart/update" method="post" id="remove-form-@index">
+                        @Html.AntiForgeryToken()
+                        <input type="hidden" name="productid" value="@product.ProductId" />
+                        <input type="hidden" name="productCount" value="0" />
+                        <a class="remove-btn" href="javascript:void(0)" onclick="document.getElementById('remove-form-@index').submit();">✖ Pašalinti</a>
+                    </form>
+                }
+            }
+
+
+        </div>
+
+        <div class="cart-section-right">
+            <div class="cart-summary">
+                <div class="item-price-details">
+                    
+                    <form action="/cart/discount" method="post">
+                        @Html.AntiForgeryToken()
+                        <div class="discount-section">
+                            <input type="text" name="code" placeholder="Nuolaidų kodas" class="discount-input">
+                            <button class="apply-btn">Pritaikyti</button>
+                        </div>
+                            <div class="error discount-error">@Html.ValidationMessageFor(m => m.Discount)</div>
+                    </form>
+
+                    <div class="item-detail-container">
+                        <div class="price-detail">
+                            <p id="detail-name">Kaina</p>
+                            <p>€@Model.Total</p>
+                        </div>
+
+                        <div class="price-detail">
+                            <p id="detail-name">Kaina be PVM</p>
+                            <p>€@((Model.Total / 100 * 79).ToString("F2", new CultureInfo("lt-LT")))</p>
+                        </div>
+
+                        <div class="price-detail">
+                            <p id="detail-name">PVM (21%)</p>
+                            <p>€@((Model.Total / 100 * 21).ToString("F2", new CultureInfo("lt-LT")))</p>
+                        </div>
+                        
+                    </div>
+                    <form action="/cart/delete-discount" method="post">
+                        @if (Model.Discount != 0)
+                        {
+                            <div class="price-detail">
+                                <p id="detail-name">Nuolaida</p>
+                            <p>-@Model.Discount % <button class="remove-discount-btn">✖</button></p>
+                            </div>
+                        }
+                    </form>
+
+                    <div class="total-price">
+                        <h2 class="total-price-h2">Viso: €@((Model.TotalWithDiscount).ToString("F2", new CultureInfo("lt-LT")))</h2>
+                    </div>
+                    
+                    <a href="/checkout/address">
+                        <button class="purchase-btn">Tęsti apsirkimą</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        function submitForm() {
+            document.getElementById('updateCartForm-' + productId).submit();
+        }
+    </script>
+</div>

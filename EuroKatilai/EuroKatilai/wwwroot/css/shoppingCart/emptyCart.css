@@ -1,0 +1,8 @@
+﻿.empty-cart {
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+    font-size: 20px;
+    font-weight: 400;
+    color: #9c142d;
+}

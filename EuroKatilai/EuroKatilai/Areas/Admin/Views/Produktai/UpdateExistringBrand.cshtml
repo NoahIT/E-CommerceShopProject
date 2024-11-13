@@ -1,0 +1,60 @@
+﻿@model EuroKatilai.Areas.Admin.ViewModels.UpdateViewModelBrand
+
+<link rel="stylesheet" href="~/css/Admin/Produktai/updateProduct.css" />
+
+<div class="main-update-product-container">
+    <div class="update-container">
+        <div class="cont-align">
+            <strong> Brand atnaujinimas</strong>
+
+            <div class="update-inputs">
+                <form enctype="multipart/form-data" class="update-form" action="/admin/products/update-brand" method="post">
+                    <input placeholder="Brand ID" type="number" name="idBrand" value="@Model.CurrentBrand.idBrand" />
+                    <input placeholder="Name" type="text" name="Name" value="@Model.CurrentBrand.Name" />
+                    <input placeholder="ClassName" type="text" name="ClassName" value="@Model.CurrentBrand.ClassName" />
+                    <input placeholder="Class" type="text" name="Class" value="@Model.CurrentBrand.Class" />
+                    <input type="hidden" name="Photo" value="@Model.CurrentBrand.Photo" />
+
+                    <input  type="file" name="newPhoto"/>
+                    <button>Atnaujinti produktą</button>
+                </form>
+
+                <form action="/admin/products/delete-brand" method="post">
+                    <input type="hidden" value="@Model.CurrentBrand.idBrand" name="id" />
+                    <button>Ištrinti produktą</button>
+                </form>
+            </div>
+        </div>
+
+
+        <div class="update-table-view">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Brand Id</th>
+                        <th>Name</th>
+                        <th>Photo</th>
+                        <th>ClassName</th>
+                        <th>Class</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var product in Model.Brands)
+                    {
+                        <form action="/admin/produktai/brands" method="post">
+                        <tr>
+                            <td>@product.idBrand<input type="hidden" value="@product.idBrand" name="idBrand" /></td>
+                            <td>@product.Name <input type="hidden" value="@product.Name" name="Name" /></td>
+                            <td><img style="min-height: 130px; min-width: 130px; max-height: 130px; max-width: 130px" alt="@product.Photo" src="@Url.Content("~/"+product.Photo)"></img><input type="hidden" value="@product.Photo" name="Photo" /></td>
+                            <td>@product.ClassName <input type="hidden" value="@product.ClassName" name="ClassName" /></td>
+                            <td>@product.Class<input type="hidden" value="@product.Class" name="Class" /></td>
+                            <td><button>Pasirinkti</button></td>
+                        </tr>
+                        </form>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>

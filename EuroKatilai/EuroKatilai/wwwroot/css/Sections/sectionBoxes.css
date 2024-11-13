@@ -1,0 +1,52 @@
+﻿.section-box-brand-text-right {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+
+    text-align: center;
+    padding: 20px;
+    margin-left: auto;
+    background-color: white;
+    width: 500px;
+}
+
+.section-box-brand-text-left {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+
+    text-align: center;
+    padding: 20px;
+    margin-right: auto;
+    background-color: white;
+    width: 500px;
+}
+
+.section-box-brand-photo {
+    text-align: center;
+    padding: 0px;
+}
+
+.section-home-box-brand-text {
+    text-align: center;
+    padding: 20px;
+}
+
+.section-home-box-brand-photo {
+    text-align: center;
+    padding: 0px;
+}
+
+.section-box-brand-text h2{
+    margin-top: 20px;
+}
+
+.section-home-box-brand-text h2 {
+    font-size: 23px;
+    font-weight: 700;
+}
+
+.section-home-box-brand-text p {
+    font-size: 15px;
+    font-weight: 500;
+}

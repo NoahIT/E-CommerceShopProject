@@ -1,0 +1,201 @@
+﻿@model HomeViewModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<link rel="stylesheet" href="~/css/Footer/footer.css" />
+
+<link rel="stylesheet" href="~/css/Forms/forms.css" />
+
+<link rel="stylesheet" href="~/css/NavBar/miniNavBars.css" />
+<link rel="stylesheet" href="~/css/NavBar/navBar.css" />
+<link rel="stylesheet" href="~/css/NavBar/navBarDropdown.css" />
+
+<link rel="stylesheet" href="~/css/OffCanva/offCanva.css" />
+
+<link rel="stylesheet" href="~/css/PromoSlide/promoSlide.css" />
+
+<link rel="stylesheet" href="~/css/Sections/sectionBoxes.css" />
+<link rel="stylesheet" href="~/css/Sections/sectionsButtons.css" />
+<link rel="stylesheet" href="~/css/Sections/sectionsOverflow.css" />
+<link rel="stylesheet" href="~/css/Sections/sectionsPhoto.css" />
+<link rel="stylesheet" href="~/css/Sections/sectionsText.css" />
+
+<link rel="stylesheet" href="~/css/BodyBg/bodyBg.css" />
+<link rel="stylesheet" href="~/css/site.css" />
+
+@await Html.PartialAsync("offCanvaNavBar")
+
+<div class="bg-body-vw">
+
+    <div class="promo-banner">
+        <div class="promo-slide active" style="background-image: url('@Model.reklamos[0]')"></div>
+
+        @for (int i = 1; i < Model.reklamos.Count; i++)
+        {
+            <div class="promo-slide" style="background-image: url('@Model.reklamos[i]')"></div>
+        }
+
+    </div>
+
+    <div class="slider-nav">
+        <div class="arrow" onclick="prevSlide()">◀</div>
+        <div class="dots">
+            <div class="dot dot-active" onclick="goToSlide(0)"></div>
+            @for (int i = 1; i < Model.reklamos.Count; i++)
+            {
+                <div class="dot" onclick="goToSlide(@i)"></div>
+                
+            }
+        </div>
+        <div class="arrow" onclick="nextSlide()">▶</div>
+    </div>
+
+    <!--Kas jus domina textas-->
+    <div class="section-container-text">
+        <div class="section-box-brand-text spanning-box" style="margin-bottom: -30px;">
+            <h2 style="margin-top: 30px; margin-bottom: 40px;">Kas jus domina?</h2>
+        </div>
+    </div>
+
+    <!--Aukstesnes klases gamintojai-->
+    <div class="row">
+        <div class="section-container-brand-photo">
+            <div class="section-home-box-brand-photo">
+                <img class="rotating-image" src="~/Images/BrandLogos/BoshLogo.png">
+            </div>
+        </div>
+        <div class="section-home-container-text">
+            <div class="section-home-box-brand-text">
+                <h2>Aukštos klasės gamintojai</h2>
+                <p>
+                    Pristatomi aukščiausios klasės, rinkoje pirmaujantys produktų gamintojai.
+                    Tiems,kurie reikalauja kokybės, ilgaamžiškumo bei patogumo.
+                </p>
+                <a class="section-button" asp-area="" asp-controller="BrandView" asp-action="Index" asp-route-_class="high">Pasirinkti</a>
+            </div>
+        </div>
+    </div>
+
+    <!--Ekonomiskos klases gamintojai-->
+    <div class="row" id="row-align">
+        <div class="section-home-container-text">
+            <div class="section-home-box-brand-text">
+                <h2>Ekonomiškos klasės gamintojai </h2>
+                <p>
+                    Šioje skiltyje pateikiami gamintojai ir jų produktai skirti tiems, kurie pirmenybę teikia
+                    ekonomiškumui ir yra tinkami sutaupyti mėgstantiems žmonėms. Puikus kokybės ir kainos
+                    santykis.
+                </p>
+                <a class="section-button" asp-area="" asp-controller="BrandView" asp-action="Index" asp-route-_class="eco">Pasirinkti</a>
+            </div>
+        </div>
+        <div class="section-container-brand-photo">
+            <div class="section-home-box-brand-photo">
+                <img class="rotating-image" src="~/Images/BrandLogos/ViessmannLogo.png">
+            </div>
+        </div>
+    </div>
+
+    <!--Kodel verta rinktis mus-->
+
+    <div class="section-container-text">
+        <div class="section-box-brand-text spanning-box" style="margin-bottom: 50px;">
+            <h2 style="margin-top: 30px; margin-bottom: 40px;">Kodėl verta rinktis mus?</h2>
+        </div>
+    </div>
+
+@*     <div class="section-home-container-text section-bg">
+        <div class="section-home-box-brand-text spanning-box">
+            <h2>Kodėl verta rinktis mus?</h2>
+        </div>
+    </div> *@
+
+<div class="why-row-align">
+        <div class="row">
+            <div class="section-container-text-why-us">
+                <div class="section-home-box-brand-text">
+                    <h2 style="color: white;">Kokybė</h2>
+                    <p style="color: white">
+                        Mūsų svetainėje rasite aukštos kokybės ir su
+                        laiku patikrintus gaminius, atitinkančius
+                        jūsų poreikius ir reikalavimus.
+                    </p>
+                </div>
+            </div>
+            <div class="section-container-text-why-us">
+                <div class="section-home-box-brand-text">
+                    <h2 style="color: white">Kaina</h2>
+                    <p style="color: white">
+                        Pasikonsultavę su mumis, mes padėsime jums
+                        išsirinkti tinkamą variantą ir pasiūlyti
+                        geriausią kainą rinkoje.
+                    </p>
+                </div>
+            </div>
+            <div class="section-container-text-why-us">
+                <div class="section-home-box-brand-text">
+                    <h2 style="color: white">Patirtis</h2>
+                    <p style="color: white">
+                        Remdamiesi išsamiomis žiniomis apie mūsų parduodamus gaminius,
+                        galime pasiūlyti sprendimą kuris atitiktų jūsų lūkesčius ir
+                        užtikrintų geriausią įmanomą efektyvumą.
+                    </p>
+                </div>
+            </div>
+        </div>
+</div>
+
+        <!-- Montavimo paslaugos -->
+        <div class="row" id="row-alignA">
+            <div class="section-container-brand-photo" >
+                <div class="section-home-box-brand-photo">
+                    <img id="montavimoImg" src="~/Images/montavimoP.jpg">
+                </div>
+            </div>
+            <div class="section-home-container-text-mont" id="montavimoTxt">
+                <div class="section-home-box-brand-text">
+                    <h2>Montavimo paslaugos </h2>
+                    <p>
+                        Jei jus domina montavimo paslaugos, susisiekite su mumis.
+                    </p>
+                    <button id="montBtnId" class="section-button">Pateikti užklausą</button>
+                </div>
+            </div>
+        </div>
+
+    <!-- Populiariausios prekes div -->
+    <div class="section-home-container-text">
+        <div class="section-home-box-brand-text spanning-box section-bg" style="margin-bottom: -30px; margin-top: 30px;">
+            <h2 id="popularItemsId">Populiariausios prekės</h2>
+        </div>
+    </div> 
+
+    <!-- Produktu konteineris -->
+    <div class="product-container">
+        <div class="products">
+            
+            @foreach (var item in Model.products)
+            {
+                <div class="product">
+                    <form action="/cart/add" method="post">
+                        <input type="hidden" name="productId" value="@item.ProductId" />
+                        <img src="@Url.Content("~/" + @item.Photo)" alt="@item.Model">
+                        <a  href="products/@item.idSeries">
+                            <h3 class="product-title">@item.Name @item.SeriesName @item.Model</h3>
+                        </a>
+                        <p class="product-price">€@item.Price</p>
+                        <button class="section-button">Į krepšelį</button>
+                    </form>
+                </div>
+            }
+
+        </div>
+    </div>
+
+</div>
+
+<script src="~/js/queryMontavimo.js"></script>
+<script src="~/js/promoBannerDisplay.js"></script>
+<script src="~/js/gamintojuNuotraukosDisplay.js"></script>

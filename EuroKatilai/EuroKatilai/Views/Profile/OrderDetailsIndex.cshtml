@@ -1,0 +1,90 @@
+﻿@model BL.Models.UserOrderModel
+@using System.Globalization
+
+@{
+    ViewData["Title"] = "Užsakymo informacija";
+}
+
+
+<link rel="stylesheet" href="~/css/shoppingCart/shoppingCart.css" />
+<link rel="stylesheet" href="~/css/shoppingCart/shoppingCartButtons.css" />
+<link rel="stylesheet" href="~/css/shoppingCart/shoppingCartAlign.css" />
+
+<link rel="stylesheet" href="~/css/PaymentDetails/paymentDetails.css" />
+<link rel="stylesheet" href="~/css/PaymentDetails/paymentSummary.css" />
+
+<link rel="stylesheet" href="~/css/Forms/forms.css" />
+<link rel="stylesheet" href="~/css/invalidComp/invalidCss.css" />
+
+<link rel="stylesheet" href="~/css/Breadcrumbs/breadcrumbs.css" />
+
+<span class="heading">Dėl užsakymo atšaukimo ir kitu veiksmu kreiptis: <strong>info@eurokatilai.lt</strong></span>
+
+<div class="checkout-container-summary">
+    <div class="cart-section-left">
+        <div class="heading-row">
+            <span class="heading">Pavadinimas</span>
+            <span class="heading">Kiekis</span>
+            <span class="heading">Kaina</span>
+            <span class="heading">Suma</span>
+        </div>
+
+        @foreach (var product in Model.Items)
+        {
+            <div class="product-row" id="orderRow">
+
+                <div class="product-details">
+                    <img src="@Url.Content("~/" + product.Photo)" alt="Stove"/>
+                    <a href="@Url.Content("~/products/" + @product.idSeries)"><span class="product-title">@product.SeriesName @product.Model</span></a>
+                </div>
+
+                <div class="price-container">
+                    <span class="final-price">@product.ProductCount</span>
+                </div>
+
+                <div class="price-container">
+                    <span class="final-price" id="totalPriceCss">@product.Price €</span>
+                </div>
+
+                <div class="total-container" id="finalPriceId">
+                    <span class="total-price" id="totalPriceCss">@(product.Price * product.ProductCount) €</span>
+                </div>
+            </div>
+        }
+    </div>
+
+    <div class="checkout-container-summary" id="orderSummary">
+
+        <div class="item-price-details">
+            @* <div class="item-detail-container"> *@
+                <div class="price-detail">
+                    <p id="detail-name">Kaina</p>
+                    <p>€@((Model.Total).ToString("F2", new CultureInfo("lt-LT")))</p>
+                </div>
+
+                <div class="price-detail">
+                    <p id="detail-name">Kaina be PVM</p>
+                    <p>€@((Model.Total / 100 * 79).ToString("F2", new CultureInfo("lt-LT")))</p>
+                </div>
+
+                <div class="price-detail">
+                    <p id="detail-name">PVM (21%)</p>
+                    <p>€@((Model.Total / 100 * 21).ToString("F2", new CultureInfo("lt-LT")))</p>
+                </div>
+
+                @if (Model.Cart.Discount > 0)
+                {
+                    <div class="price-detail">
+                        <p id="detail-name">Nuolaida</p>
+                        <p>-@Model.Cart.Discount %</p>
+                    </div>
+                }
+
+                <div class="total-price">
+                    <h2 class="total-price-h2">Viso: €@((Model.TotalWithDiscount).ToString("F2", new CultureInfo("lt-LT")))</h2>
+                </div>
+@*             </div> *@
+        </div>
+            
+    </div>
+</div>

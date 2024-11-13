@@ -1,0 +1,64 @@
+﻿@model EuroKatilai.Areas.Admin.ViewModels.UpdateViewModel
+
+<link rel="stylesheet" href="~/css/Admin/Produktai/updateProduct.css" />
+
+<div class="main-update-product-container">
+    <div class="update-container">
+        <div class="cont-align">
+            <strong> Produkto/ų atnaujinimas</strong>
+
+            <div class="update-inputs">
+                <form class="update-form" action="/admin/products/update-product" method="post">
+                    <input placeholder="Produkto ID" type="number" name="ProductId" value="@Model.CurrentProduct.ProductId" />
+                    <input placeholder="Serijos ID" type="number" name="SeriesID" value="@Model.CurrentProduct.SeriesID" />
+                    <input placeholder="Modelis" type="text" name="Model" value="@Model.CurrentProduct.Model" />
+                    <input placeholder="Jėga" type="text" name="Power" value="@Model.CurrentProduct.Power" />
+                    <input placeholder="Energijos klasė" type="text" name="Energy" value="@Model.CurrentProduct.Energy" />
+                    <input placeholder="Kaina" type="text" name="Price" value="@Model.CurrentProduct.Price" />
+
+                    <textarea name="Attributes" style="min-height: 200px; min-width: 200px;" placeholder="Atributai"> @Model.CurrentProduct.Attributes </textarea>
+                    <button>Atnaujinti produktą</button>
+                </form>
+                <form action="/admin/products/delete-existing-product" method="post">
+                    <input type="hidden" value="@Model.CurrentProduct.ProductId" name="id" />
+                    <button>Ištrinti produktą</button>
+                </form>
+            </div>
+        </div>
+        
+
+        <div class="update-table-view">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ProductID</th>
+                        <th>SeriesID</th>
+                        <th>Model</th>
+                        <th>Power</th>
+                        <th>Energy</th>
+                        <th>Attributes</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                @foreach (var product in Model.Products)
+                {
+                        <form action="/admin/products/update-existing-product" method="post">
+                        <tr>
+                            <td>@product.ProductId<input type="hidden" value="@product.ProductId" name="ProductId" /></td>
+                            <td>@product.SeriesID <input type="hidden" value="@product.SeriesID" name="SeriesID" /></td>
+                            <td>@product.Model <input type="hidden" value="@product.Model" name="Model" /></td>
+                            <td>@product.Power <input type="hidden" value="@product.Power" name="Power" /></td>
+                            <td>@product.Energy<input type="hidden" value="@product.Energy" name="Energy" /></td>
+                            <td>@product.Attributes<input type="hidden" value="@product.Attributes" name="Attributes" /></td>
+                            <td>@product.Price<input type="hidden" value="@product.Price" name="Price" /></td>
+                            <td><button>Pasirinkti</button></td>
+                        </tr>
+                    </form>
+                }
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>

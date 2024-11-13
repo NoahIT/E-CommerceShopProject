@@ -1,0 +1,106 @@
+﻿@model IEnumerable<DAL.Models.CategoryViewModel>
+
+<link rel="stylesheet" href="~/css/Admin/Produktai/addProduct.css" />
+
+<div class="main-product-container">
+
+    <div class="row-of-admin-product-edit">
+        <div class="create-product-inputs-container">
+
+            <strong>Naujo produkto kurimas</strong>
+
+            <div class="inputs-container">
+                <form class="input-forms" action="/admin/products/create-product" method="post">
+                    <input placeholder="Serijos ID" type="number" name="SeriesID" />
+                    <input placeholder="Modelis" type="text" name="Model" />
+                    <input placeholder="Jėga" type="text" name="Power" />
+                    <input placeholder="Energijos klasė" type="text" name="Energy" />
+                    <input placeholder="Kaina" type="text" name="Price" />
+
+                    <textarea name="Attributes" style="min-height: 200px; min-width: 200px;" placeholder="Atributai"> {"Pavadinimas": "value","Pavadinimas": "value"}</textarea>
+                    <button>Pridėti Produktą</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="create-series-inputs-container">
+
+            <strong>Naujos serijos kūrimas</strong>
+
+            <div class="inputs-container">
+                <form class="input-forms" enctype="multipart/form-data" action="/admin/products/create-series" method="post">
+                    <input placeholder="Kategorijos ID" name="CategoryId" type="text" />
+                    <input placeholder="Prekės ženklo ID" name="BrandId" type="text" />
+                    <input placeholder="Serijos pavadinimas" name="SeriesName" type="text" />
+                    <input placeholder="Abbr" type="text" name="Abbr" />
+                    <textarea placeholder="Trumpas aprašymas" name="ShortDescription"></textarea>
+                    <textarea placeholder="Platus aprašymas" name="Description">Kad padalinti tekta ir jis prasidetu is naujos eilutes. Reikia parasyti TASKA.</textarea>
+                    <textarea placeholder="Charakteristikos" name="Characteristics" style="min-height: 250px; min-width: 250px;">
+                {"Galingumo diapazonas": "3 ~ 400 V nuo 4,7 iki 12,2 kW", "Šildymo vandens temperatūra": "iki + 65 °C", "Integruotas sistemos valdiklis": "LUXTRONIK 2.1 kurį galima valdyti išmaniuoju įrenginiu", "Integruotas emaliuotas tūrinis vandens šildytuvas": "ruošiantis 178 litrų karšto vandens", "Trifazė elektros srovė": true, "Užpildytas freonu": "R410A"}
+                </textarea>
+
+                    <input type="file" name="photos" />
+                    <button>Pridėti Seriją</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="row-of-admin-product-edit">
+        <div class="create-category-inputs-container">
+
+            <strong>Naujos kategorijos kurimas</strong>
+
+            <div class="inputs-container">
+                <form class="input-forms" action="/admin/products/create-category" method="post">
+                    <input placeholder="Kategorijos pavadinimas" name="CategoryName" type="text" />
+
+                    <button>Pridėti Kategoriją</button>
+                </form>
+                @* cia *@
+                <div class="existing-categories">
+                    <h2>Esamos kategorijos: </h2>
+                    <div class="category-container">
+                        <ul>
+                            @foreach (var x in @Model)
+                            {
+                                <label> @x.idCategories | @x.CategoryName</label>
+                            }
+                        </ul>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="create-category-inputs-container">
+
+            <strong>Naujo prekės ženklo (brand) kurimas</strong>
+
+            <div class="inputs-container">
+                <form enctype="multipart/form-data" class="input-forms" action="/admin/products/create-brand" method="post">
+                    <input placeholder="Prekės ženklo pavadinimas" name="Name" type="text" />
+                    <input id="ClassName" name="ClassName" type="hidden" value="Aukštos klasės gamintojai" />
+
+                    <select name="Class" onchange="updateHiddenInput(this)">
+                        <option selected value="high">Aukštos klasės gamintojai</option>
+                        <option value="eco">Ekonominės klasės gamintojai</option>
+                    </select>
+
+                    <input type="file" name="photos" />
+                    <button>Pridėti prekės ženklą</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+    
+
+<script>
+function updateHiddenInput(select) {
+  var value = select.options[select.selectedIndex].text;
+  document.getElementById('ClassName').value = value;
+}
+</script>

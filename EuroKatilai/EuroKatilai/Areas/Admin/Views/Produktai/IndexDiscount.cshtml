@@ -1,0 +1,29 @@
+﻿@model List<DAL.Models.DiscountModel>
+
+<link rel="stylesheet" href="~/css/Admin/Reklamos/adminPromo.css" />
+
+<div class="promo-container">
+
+    <strong>Discount valdymas</strong>
+
+    <form action="/admin/discountCodes/create" method="post">
+        <input type="text" name="Code" placeholder="Kodas" />
+        <input type="text" name="Precent" placeholder="Procentas" />
+        <button>Pridėti naują discount koda</button>
+    </form>
+
+    <form action="/admin/discountCodes/delete" method="post">
+        <input placeholder="Discount ID" type="number" name="idDiscount" />
+        <button>Ištrinti esamą koda pagal ID</button>
+    </form>
+
+    @foreach (var add in Model)
+    {
+        <div class="admin-promo-row">
+            <label>Discount ID: @add.idDiscount</label>
+            <label>Discount Code: @add.Code</label>
+            <label>Discount Code: @add.Precent</label>
+        </div>
+    }
+
+</div>

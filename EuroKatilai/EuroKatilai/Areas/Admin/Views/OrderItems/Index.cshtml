@@ -1,0 +1,28 @@
+﻿@model List<DAL.Models.OrderItemModel>
+
+<table>
+    <thead>
+        <tr>
+            <th>OrderItemId</th>
+            <th>OrderId</th>
+            <th>ProductId</th>
+            <th>ProductCount</th>
+            <th>Created</th>
+            <th>Modified</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.OrderItemId</td>
+            <td>@item.OrderId</td>
+            <td>@item.ProductId</td>
+            <td>@item.ProductCount</td>
+            <td>@item.Created</td>
+            <td>@item.Modified</td>
+        </tr>
+    }
+
+    </tbody>
+</table>

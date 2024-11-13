@@ -1,0 +1,49 @@
+﻿.economical-brands {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 80px;
+}
+
+a.brand {
+    display: block; /* This makes the a element behave like a block, allowing it to contain the div */
+    text-decoration: none; /* Removes the underline from links */
+    border: 2px solid #e6e6e6;
+    border-radius: 20px;
+    background: white;
+    margin: 10px;
+    width: calc(33% - 20px); /* Adjust width as necessary */
+    height: auto; /* Adjust height as necessary */
+    /* Other styles */
+}
+
+a.brand:hover {
+    border: 2px solid rgba(205, 35, 33, 0.4);
+    transition: all 1s ease;
+}
+
+a.brand {
+    border: 2px solid #e6e6e6;
+    border-radius: 20px;
+    background: white;
+    margin: 10px;
+    width: calc(33% - 20px); /* Three items per row with spacing */
+    height: auto; /* Example height, adjust as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+    .brand:hover {
+        border: 2px solid rgb(205, 35, 33, 0.4);
+        transition: all 1s ease;
+    }
+
+.brand img {
+    max-width: 100%; /* Makes sure the image does not overflow its container */
+    max-height: 100%;
+
+    border-radius: 20px;
+}

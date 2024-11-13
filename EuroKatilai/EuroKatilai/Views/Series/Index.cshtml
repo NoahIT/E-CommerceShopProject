@@ -1,0 +1,123 @@
+﻿@model SeriesViewModel
+
+@{
+
+    ViewData["Title"] = "Geoterminiai_PK";
+}
+
+<link rel="stylesheet" href="~/css/Footer/footer.css" />
+
+<link rel="stylesheet" href="~/css/Forms/forms.css" />
+
+<link rel="stylesheet" href="~/css/NavBar/miniNavBars.css" />
+<link rel="stylesheet" href="~/css/NavBar/navBar.css" />
+<link rel="stylesheet" href="~/css/NavBar/navBarDropdown.css" />
+
+<link rel="stylesheet" href="~/css/OffCanva/offCanva.css" />
+
+<link rel="stylesheet" href="~/css/PromoSlide/promoSlide.css" />
+
+<link rel="stylesheet" href="~/css/Sections/sectionBoxes.css" />
+<link rel="stylesheet" href="~/css/Sections/sectionsButtons.css" />
+<link rel="stylesheet" href="~/css/Sections/sectionsOverflow.css" />
+<link rel="stylesheet" href="~/css/Sections/sectionsPhoto.css" />
+<link rel="stylesheet" href="~/css/Sections/sectionsText.css" />
+
+<link rel="stylesheet" href="~/css/Breadcrumbs/breadcrumbs.css" />
+<link rel="stylesheet" href="~/css/BodyBg/bodyBg.css" />
+
+@await Html.PartialAsync("offCanvaNavBar")
+
+@if (Model.series != null)
+{
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Pradžia</a></li>
+            <li class="breadcrumb-item active" aria-current="page">@Model.series[0][0].CategoryName</li>
+        </ol>
+    </nav>
+}
+
+<div class="bg-body-vw" style="border-radius: 10px; margin: auto; box-shadow: 0px 1px 25px -10px black; padding: 10px; margin-top: 30px;">
+    @{
+        @foreach (var seriesList in Model.series)
+        {
+            <div class="section-container-text section-bg">
+                <div class="section-box-brand-text spanning-box">
+                    <h2>@seriesList[0].CategoryName</h2>
+                </div>
+            </div>
+
+            for (int i = 0; i < seriesList.Count; i += 2)
+            {
+                <div class="row-left">
+                    <div class="section-container-product-photo">
+                        <img src="@Url.Content("~/" + seriesList[i].Photo)" alt="@seriesList[i].SeriesName">
+                    </div>
+                    <div class="section-container-text-left">
+                        <div class="section-box-brand-text-left">
+                            <h2>@seriesList[i].SeriesName</h2>
+                            <p>@seriesList[i].ShortDescription</p>
+                            <a asp-area="" asp-controller="productview" asp-action="IndexBySeries" asp-route-seriesId="@seriesList[i].idSeries">
+                                <button class="section-button">Pasirinkti galingumą</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                if (i + 1 < seriesList.Count)
+                {
+                    <div class="row-right">
+                        <div class="section-container-text-right">
+                            <div class="section-box-brand-text-right">
+                                <h2>@seriesList[i + 1].SeriesName</h2>
+                                <p>@seriesList[i + 1].ShortDescription</p>
+                                <a asp-area="" asp-controller="productview" asp-action="IndexBySeries" asp-route-seriesId="@seriesList[i + 1].idSeries">
+                                    <button class="section-button">Pasirinkti galingumą</button>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="section-container-product-photo">
+                            <img src="@Url.Content("~/" + seriesList[i + 1].Photo)" alt="@seriesList[i + 1].SeriesName">
+                        </div>
+                    </div>
+                }
+            }
+        }
+    }
+</div>
+
+    
+
+
+
+@* <div class="row-left">
+    <div class="section-container-product-photo">
+        <img src="~/Images/LaikinasKatilas.png" alt="Altera WZS 1">
+    </div>
+    <div class="section-container-text-left">
+        <div class="section-box-brand-text-left">
+            <h2>Altera WZS</h2>
+            <p>
+                Trumpas produkto aprašymas
+            </p>
+            <button class="section-button">Pasirinkti galingumą</button>
+        </div>
+    </div>
+</div>
+
+
+<div class="row-right">
+    <div class="section-container-text-right">
+            <div class="section-box-brand-text-right">
+                <h2>Altera WZS 1</h2>
+                <p>
+                    Trumpas produkto aprašymas
+                </p>
+                <button class="section-button">Pasirinkti galingumą</button>
+            </div>
+    </div>
+    <div class="section-container-product-photo">
+        <img src="~/Images/LaikinasKatilas.png" alt="Altera WZS 1">
+    </div>
+</div> *@

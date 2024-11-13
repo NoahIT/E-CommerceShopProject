@@ -1,0 +1,26 @@
+﻿@page
+@model EuroKatilai.Areas.Admin.Views.Produktai.IndexModel
+@{
+}
+
+<link rel="stylesheet" href="~/css/Admin/Produktai/adminProducts.css" />
+
+<div class="product-container-admin">
+    <label> Produktų funkcijos</label>
+
+    <div class="product-crud-container-admin">
+        <div class="create-product-admin">
+            <a href="/admin/products/create-new-product">Sukurti naują produtką</a>
+        </div>
+
+        <div class="update-product-admin">
+            <a href="/admin/products/update-existing-product">Atnaujinti/Ištrinti esamą produktą</a>
+        </div>
+        <div class="update-product-admin">
+            <a href="/admin/produktai/brands">Atnaujinti/Ištrinti esamą brand</a>
+        </div>
+        <div class="update-product-admin">
+            <a href="/admin/products/series">Atnaujinti/Ištrinti esamą serija</a>
+        </div>
+    </div>
+</div>

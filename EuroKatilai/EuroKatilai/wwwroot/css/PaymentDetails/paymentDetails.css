@@ -1,0 +1,145 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+.active-delivery-option {
+    background-color: #ed7272; /* Цвет фона для активной кнопки */
+    color: #f7f7f7; /* Цвет текста для активной кнопки */
+    /* Добавьте другие стили, если это необходимо */
+}
+
+#btnfiz.active, #btnjur.active, #deliverySelectorA.active, #deliverySelectorB.active {
+    color: white;
+    background-color: #9c142d;
+}
+
+#totalPriceCss{
+    font-size: 15px;
+    width: 100px;
+}
+
+.checkout-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1000px;
+    margin: auto;
+    flex-wrap: wrap;
+}
+
+.checkout-personal-details {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0px 1px 25px -10px black;
+}
+
+/*.input-name-label{
+   
+}
+*/
+.checkout-container-details h2 {
+    margin-top: 0px;
+}
+
+.checkout-personal-details h2 {
+    font-size: 25px;
+}
+
+.delivery-options h2 {
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+#firstName {
+    width: 250px;
+    height: 30px;
+    margin: auto;
+    font-size: 12px;
+}
+
+.form-row {
+    flex-direction: column;
+    flex-basis: 50%;
+}
+
+.form-group{
+    height: 80px;
+}
+
+.checkout-container-summary {
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 20px;
+    height: min-content;
+    align-content: center;
+    justify-content: center;
+    box-shadow: 0px 1px 25px -10px black;
+    padding: 10px;
+}
+
+#view-juridinisAsmuoFormDView h {
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    margin: 20px 0 10px 0;
+    color: #9c142d;
+    font-weight: 500;
+}
+
+/*.input-details {
+    height: 100%;
+}*/
+
+/*delivery boxas --------------------------------------------------------*/
+.free-delivery-box {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+    justify-content: center;
+}
+
+.free-delivery-text {
+    margin: 0;
+}
+
+.free-delivery-amount {
+    font-weight: bold;
+
+}
+
+.free-delivery-condition {
+    color: #666;
+    font-size: 0.9em;
+}
+
+/*chk box*/
+
+.personal-details {
+    display: flex;
+    margin-top: 25px;
+}
+
+.personal-details label {
+  cursor: pointer;
+  font-size: 13px;
+  display: flex; /* Change from flex to block */
+  line-height: 1; /* Add line height for better control */
+  white-space: nowrap; /* Prevent wrapping */
+}
+
+.personal-details input[type="checkbox"] {
+    margin-right: 10px;
+  vertical-align: middle; /* Aligns the checkbox vertically */
+  transform: scale(0.85); /* Makes the checkbox smaller */
+}

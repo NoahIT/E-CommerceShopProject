@@ -1,0 +1,254 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - eurokatilai</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+
+    <link rel="stylesheet" href="~/EuroKatilai.styles.css" asp-append-version="true" />
+
+    @* M-Klases --------------------------------------------------------------------------------------------------*@
+    <link rel="stylesheet" href="~/css/Footer/footer.css" />
+
+    <link rel="stylesheet" href="~/css/Forms/forms.css" />
+
+    <link rel="stylesheet" href="~/css/NavBar/miniNavBars.css" />
+    <link rel="stylesheet" href="~/css/NavBar/navBar.css" />
+    <link rel="stylesheet" href="~/css/NavBar/navBarDropdown.css" />
+
+    <link rel="stylesheet" href="~/css/OffCanva/offCanva.css" />
+
+    <link rel="stylesheet" href="~/css/PromoSlide/promoSlide.css" />
+
+    <link rel="stylesheet" href="~/css/Sections/sectionBoxes.css" />
+    <link rel="stylesheet" href="~/css/Sections/sectionsButtons.css" />
+    <link rel="stylesheet" href="~/css/Sections/sectionsOverflow.css" />
+    <link rel="stylesheet" href="~/css/Sections/sectionsPhoto.css" />
+    <link rel="stylesheet" href="~/css/Sections/sectionsText.css" />
+
+    <link rel="stylesheet" href="~/css/ChatBot/chatBot.css" />
+    <link rel="stylesheet" href="~/css/Search/search.css" />
+
+</head>
+<body>
+<header>
+    <div class="mini-navbars">
+        <span id="rotating-text">Nemokamas pristatymas užsakymams nuo 100 €</span>
+    </div>
+
+    <nav class="navbar navbar-expand-sm custom-navbar">
+        <div class="container-fluid">
+            <a class="btn btn-primary custom-offcanvas offcanvas-sizing" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+                ☰
+            </a>
+
+            <a id="navBarbrandLogo" class="navbar-brand" asp-controller="Home" asp-action="Index">
+                <img src="/Images/EK_LogoF.png" alt="Logo" style="height: 50px; vertical-align: middle;">
+                <span style="vertical-align: middle;">
+                    EURO<br>
+                    <span class="brand-second-line">KATILAI</span>
+                </span>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="navbar">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="/Produktu_Katalogas" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Prekių katalogas
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+
+                            <li><label class="drop-lb"> Šilumos siurbliai</label></li>
+
+                            <li><a class="dropdown-item" asp-area="" asp-controller="series" asp-action="IndexAbbrId" asp-route-abbrev="geoterminiai">Geoterminiai</a></li>
+                            <li><a class="dropdown-item" asp-area="" asp-controller="series" asp-action="IndexAbbrId" asp-route-abbrev="oras-vanduo">Oras-Vanduo</a></li>
+                            <li><a class="dropdown-item" asp-area="" asp-controller="series" asp-action="IndexAbbrId" asp-route-abbrev="oras-oras">Oras-oras</a></li>
+                            <li><a class="dropdown-item" asp-area="" asp-controller="series" asp-action="IndexAbbrId" asp-route-abbrev="iranga">Šilumos siurblių įranga</a></li>
+                            <li><hr class="dropdown-divider"></li>
+
+                            <li><label class="drop-lb"> Rekuperacija </label></li>
+
+                            <li><hr class="dropdown-divider"></li>
+
+                            <li><a class="dropdown-item" asp-area="" asp-controller="series" asp-action="IndexAbbrId" asp-route-abbrev="rekuperatoriai">Rekuperatoriai</a></li>
+                            <li><a class="dropdown-item" asp-area="" asp-controller="series" asp-action="IndexAbbrId" asp-route-abbrev="Rekuperatoriu-drekintuvai">Rekuperatorių drėkintuvai</a></li>
+                            <li><a class="dropdown-item" asp-area="" asp-controller="series" asp-action="IndexAbbrId" asp-route-abbrev="Difuzoriai">Difuzoriai</a></li>
+                            <li><a class="dropdown-item" asp-area="" asp-controller="series" asp-action="IndexAbbrId" asp-route-abbrev="Rekuperatoriu-iranga">Rekuperatorių įranga</a></li>
+
+                            <li><hr class="dropdown-divider"></li>
+
+                            <li><a class="dropdown-item" asp-area="" asp-controller="searchproduct" asp-action="Search">Visi produktai</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                <ul class="navbar-nav flex-grow-1 me-auto">
+                    @* <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Montavimo paslaugos</a>
+                        </li> *@
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="" asp-controller="aboutus" asp-action="Index">Apie Mus</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" asp-area="" asp-controller="Contacts" asp-action="Index">Kontaktai</a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav navbar-nav-right ms-auto nav-icon-sizing" id="list-links">
+                    @*                          <li class="nav-item nav-icon">
+                            <a class="nav-link" href="#" id="search-icon">
+                                <i class="fa fa-search" aria-hidden="true"></i>
+                            </a>
+                        </li>
+ *@
+                    @*                         <div class="search">
+                            <input type="text" placeholder="Search...">
+                            <div class="icon"></div>
+                        </div> *@
+
+                    <li class="nav-item nav-icon">
+                        <div id="search1">
+                            <form id="mainsearch" action="/product/search" method="get">
+                                <div class="search-div">
+                                    <input name="searchFor" type="search" placeholder="Search" autocomplete="off">
+                                </div>
+                            </form>
+                                <div  class="search-results" id="searchResults"></div>
+                        </div>
+                    </li>
+                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+                    <script>
+                            $(function () {
+                                var searchInput = $('input[name="searchFor"]');
+
+                                searchInput.on('input', function () {
+                                    var inputVal = $(this).val();
+                                    if (inputVal.length >= 1) {
+                                        $.ajax({
+                                            url: '/product/quicksearch',
+                                            type: 'GET',
+                                            data: { searchQuery: inputVal },
+                                            success: function (data) {
+                                                $('#searchResults').html(data).show();
+                                            },
+                                            error: function () {
+                                                $('#searchResults').html('<div>Error loading results</div>').show();
+                                            }
+                                        });
+                                    } else {
+                                        $('#searchResults').hide();
+                                    }
+                                });
+
+                                searchInput.on('blur', function () {
+                                    setTimeout(function () { 
+                                        $('#searchResults').hide();
+                                        searchInput.val(''); 
+                                    }, 200); 
+                                });
+
+                                $('#mainsearch').on('submit', function (e) {
+                                    if (searchInput.val().length <= 2) {
+                                        e.preventDefault(); 
+                                        return false;
+                                    }
+                                });
+                            });
+
+                    </script>
+
+
+                    @await Component.InvokeAsync("MainMenu")
+
+                    <li class="nav-item nav-icon">
+                        <a class="nav-link" asp-area="" asp-controller="ShoppingCart" asp-action="Index">
+                            <i class="fa-solid fa-cart-shopping" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
+                @* <input type="text" id="search-input" class="search-input" placeholder="Search..."> *@
+            </div>
+        </div>
+    </nav>
+
+    <div class="mini-navbars mini-bot-nav">
+        Susisiekite su mumis ir gaukite ypatingus pasiūlymus
+    </div>
+</header>
+
+@* chtabotas T-Nojus----------------------------------------------------------------------------------------------------------------*@
+
+<div class="container content">
+    <main role="main" class="pb-3">
+        @RenderBody()
+    </main>
+</div>
+
+<div id="ch-chat-button">
+    <img id="chatBotImg" src="/Images/EK_LogoF.png" />
+</div>
+
+<div id="ch-contact-form-panel">
+    <span id="ch-close-btn">&#10006;</span>
+    <form class="ch-form" action="/send-email" method="post">
+        <h2>Užpildykite formą ir kuo greičiau su jumis susisieksime.</h2>
+
+        <label> Vardas</label>
+        <input type="text" name="Name" placeholder="Vardas" required>
+
+        <label> El. paštas</label>
+        <input type="email" name="Email" placeholder="El. paštas" required/>
+
+        <textarea name="Message" placeholder="Jūsų žinutė" required></textarea>
+        <button type="submit">Siūsti</button>
+    </form>
+</div>
+
+<footer class="border-top footer text-muted">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h5>Paslaugos</h5>
+                <ul>
+                    <li><a href="#">Produktai</a></li>
+                    <li><a href="#">Apie mus</a></li>
+                    <li><a href="#">Kontaktai</a></li>
+                </ul>
+            </div>
+            <div class="col">
+                <h5>Naudinga Informacija</h5>
+                <ul>
+                    <li><a href="#">Terminai ir sąlygos</a></li>
+                    <li><a href="#">Grąžinimo politika</a></li>
+                    <li><a href="#">Pristatymo sąlygos</a></li>
+                    <li><a href="#">Produktų garantija</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container footer-privacy-policy" style="color: white">&copy; 2024 - EUROKATILAI</div>
+</footer>
+
+<script src="~/js/chatBot.js"></script>
+
+<script src="~/js/miniNavBarDisplay.js"></script>
+<script src="~/js/changingTextNavBarDisplay.js"></script>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+@* <script src="~/js/search.js"></script> *@
+@await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

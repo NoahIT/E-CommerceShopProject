@@ -1,0 +1,70 @@
+﻿
+.promo-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    border-radius: 20px;
+    background-color: white;
+    padding: 10px;
+    border: 1px solid lightgray;
+    box-shadow: 0px 1px 15px -10px black;
+}
+
+.promo-container strong{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 0px;
+    font-size: 20px;
+    border-bottom: 2px solid tomato;
+}
+
+.promo-container form{
+    border: 1px solid lightgray;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0px 1px 15px -10px black;
+}
+
+.promo-container form button, input[type="number"]{
+    border: 1px solid lightgray;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.promo-container form input[type="number"]{
+    height: 35px;
+}
+
+.promo-container form button:hover{
+    border-color: tomato;
+}
+
+.admin-promo-row {
+    border: 1px solid lightgray;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0px 1px 15px -10px black;
+}
+
+.admin-promo-row img {
+    width: 300px;
+    border-radius: 10px;
+    margin: 10px;
+    border: 2px solid white;
+    box-shadow: 0px 1px 15px -10px black;
+}
+
+.admin-promo-row label {
+    border: 1px solid lightgray;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: white;
+    font-size: 15px;
+    font-weight: 400;
+    box-shadow: 0px 1px 15px -10px black;
+}

@@ -1,0 +1,188 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.spanning-box {
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: -50px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+#popularItemsId{
+    margin-top: 50px;
+}
+
+#montavimoImg {
+    width: 600px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+#row-align {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+.why-row-align{
+    margin: 50px;
+}
+
+.section-bg {
+    background-color: white;
+}
+
+#row-alignA {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    gap: 0px;
+    margin-top: 60px;
+    margin-left: auto;
+}
+
+#montavimoTxt{
+    display: flex;
+    padding: 0px;
+    width: 30%;
+}
+
+/*nuo cia ipastinau productgrid.css testavimui (istrinti) -------------------------------------------- */
+
+.nav-arrow {
+    background-color: transparent; 
+    border: none; 
+    background: none;
+    cursor: pointer;
+    box-shadow: none; 
+    color: black;
+    font-size: 1.5rem;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.products-navigation {
+    text-align: center;
+    padding: 20px;
+}
+
+.filter-sort-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: nowrap;
+    background-color: white;
+    margin: 20px;
+}
+
+.fi-sort-bar {
+    margin-left: -270px;
+    background-color: white;
+}
+
+.filter-sort-bar > .filter,
+.filter-sort-bar > .sort {
+    flex: 1;
+}
+
+.filter-sort-bar > .product-count {
+    flex-shrink: 0;
+    padding-left: 0px;
+    white-space: nowrap;
+}
+
+.filter label,
+.sort label {
+    margin-right: 10px;
+}
+
+.filter select,
+.sort select {
+    padding: 10px 10px;
+    border: none;
+    background-color: white;
+}
+
+.product-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.product-count {
+    font-size: 1rem;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.product {
+    flex: 0 0 calc(16.666% - 20px);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 250px;
+    text-align: center;
+    background-color: white;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.product-title{
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: black;
+}
+
+.product a{
+    text-decoration: none;
+}
+
+.product-price {
+    font-size: 1.0rem;
+    color: #333;
+}
+
+/*baigiasi cia (istrinti) -------------------------------------------- */
+
+@media (max-width: 768px) {
+    .products {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .filter-sort-bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .product {
+        flex: 0 0 calc(50% - 20px);
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .section-container {
+        flex-basis: 100%;
+        margin: 0 0 20px 0;
+    }
+}

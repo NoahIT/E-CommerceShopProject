@@ -1,0 +1,166 @@
+﻿@using EuroKatilai.Controllers
+@using Microsoft.AspNetCore.Mvc.TagHelpers
+@model SearchViewModel
+
+@{
+    ViewData["Title"] = "Visi Produktai";
+}
+
+<link rel="stylesheet" href="~/css/Footer/footer.css" />
+
+<link rel="stylesheet" href="~/css/Forms/forms.css" />
+
+<link rel="stylesheet" href="~/css/NavBar/miniNavBars.css" />
+<link rel="stylesheet" href="~/css/NavBar/navBar.css" />
+<link rel="stylesheet" href="~/css/NavBar/navBarDropdown.css" />
+
+<link rel="stylesheet" href="~/css/OffCanva/offCanva.css" />
+
+<link rel="stylesheet" href="~/css/PromoSlide/promoSlide.css" />
+
+<link rel="stylesheet" href="~/css/Sections/sectionBoxes.css" />
+<link rel="stylesheet" href="~/css/Sections/sectionsButtons.css" />
+<link rel="stylesheet" href="~/css/Sections/sectionsOverflow.css" />
+<link rel="stylesheet" href="~/css/Sections/sectionsPhoto.css" />
+<link rel="stylesheet" href="~/css/Sections/sectionsText.css" />
+
+<link rel="stylesheet" href="~/css/site.css" />
+<link rel="stylesheet" href="~/css/BodyBg/bodyBg.css" />
+
+<link rel="stylesheet" href="~/css/Breadcrumbs/breadcrumbs.css" />
+
+@await Html.PartialAsync("offCanvaNavBar")
+
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Pradžia</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Produktų paieška</li>
+    </ol>
+</nav>
+
+<div class="bg-body-vw" style="border-radius: 10px; box-shadow: 0px 1px 25px -10px black; padding: 5px; margin-bottom: 10px; margin-top: 20px;">
+    <div class="section-container-text">
+        <div class="section-box-brand-text spanning-box section-bg">
+            <h2>Ieškoma pagal "@Model.searchFor"</h2>
+        </div>
+    </div>
+
+    <!-- Produktu konteineris -->
+    <div class="product-container">
+        <form id="filterForm" action="/product/search" method="get">
+            <input type="hidden" value="@Model.searchFor" name="searchFor" />
+            <div class="filter-sort-bar">
+                <div class="filter">
+                    <!-- Filter options -->
+                    <label for="filter">Filtras:</label>
+                    <select id="filter" name="f" onchange="this.form.submit();">
+                        @if (Model.f == FilterAZ.None)
+                        {
+                            <option value="None" selected>Nėra</option>
+                        }
+                        else
+                        {
+                            <option value="None">Nėra</option>
+                        }
+                        @if (Model.f == FilterAZ.AZ)
+                        {
+                            <option value="AZ" selected>A-Z</option>
+                        }
+                        else
+                        {
+                            <option value="AZ">A-Z</option>
+                        }
+                        @if (Model.f == FilterAZ.ZA)
+                        {
+                            <option value="ZA" selected>Z-A</option>
+                        }
+                        else
+                        {
+                            <option value="ZA">Z-A</option>
+                        }
+                    </select>
+                </div>
+                <div class="sort fi-sort-bar">
+                    <label for="sort">Rikiuoti pagal:</label>
+                    <select id="sort" name="p" onchange="this.form.submit();">
+                        @if (Model.p == FilterPrice.None)
+                        {
+                            <option value="None" selected>Nėra</option>
+                        }
+                        else
+                        {
+                            <option value="None">Nėra</option>
+                        }
+                        @if (Model.p == FilterPrice.Increasing)
+                        {
+                            <option value="Increasing" selected>Nuo pigiausio iki brangiausio</option>
+                        }
+                        else
+                        {
+                            <option value="Increasing">Nuo pigiausio iki brangiausio</option>
+                        }
+                        @if (Model.p == FilterPrice.Decreasing)
+                        {
+                            <option value="Decreasing" selected>Nuo brangiausio iki pigiausio</option>
+                        }
+                        else
+                        {
+                            <option value="Decreasing">Nuo brangiausio iki pigiausio</option>
+                        }
+                    </select>
+                </div>
+                <span class="product-count">@Model.products.Count produktų</span>
+            </div>
+        </form>
+
+        <!-- Products -->
+        <div class="products">
+
+            @if (Model.products.Count == 0)
+            {
+                <h>Toks produktas nebuvo nerastas..</h>
+            }
+
+            @foreach (var product in Model.products)
+            {
+                <div class="product">
+                    <img src=@Url.Content("~/" + @product.Photo) alt="@product.ModelName">
+                    <a href="@Url.Content("~/" + "products/" + @product.idSeries)">
+                        <h3 class="product-title">@product.BrandName @product.SeriesName @product.ModelName</h3>
+                    </a>
+                    <p class="product-price">€@product.Price EUR</p>
+                    <form action="/cart/add" method="post">
+                        <input type="hidden" name="productId" value="@product.ProductId" />
+                        <button class="section-button">Į krepšelį</button>
+                    </form>
+                </div>
+            }
+
+        </div>
+    </div>
+
+    <div class="products-navigation">
+        @if (Model.CurrentPage > 1)
+        {
+            <a class="nav-arrow left-arrow" href="@Url.Action("Search", new { searchFor = Model.searchFor, f = Model.f, p = Model.p, pageNumber = Model.CurrentPage - 1})">←</a>
+        }
+        <!-- Display page numbers -->
+        @for (int i = 1; i <= Model.TotalPages; i++)
+        {
+            if (i == Model.CurrentPage)
+            {
+                <span>@i</span>
+            }
+            else
+            {
+                <a href="@Url.Action("Search", new { searchFor = Model.searchFor, f = Model.f, p = Model.p, pageNumber = i})">@i</a>
+            }
+        }
+        @if (Model.CurrentPage < Model.TotalPages)
+        {
+            <a class="nav-arrow right-arrow" href="@Url.Action("Search", new { searchFor = Model.searchFor, f = Model.f, p = Model.p, pageNumber = Model.CurrentPage + 1})">→</a>
+        }
+    </div>
+</div>
+

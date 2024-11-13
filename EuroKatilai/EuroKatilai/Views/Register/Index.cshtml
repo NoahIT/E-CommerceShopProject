@@ -1,0 +1,176 @@
+﻿@model RegisterViewModel
+
+@{
+    ViewData["Title"] = "Registracija";
+}
+
+<link rel="stylesheet" href="~/css/Footer/footer.css" />
+
+<link rel="stylesheet" href="~/css/Forms/forms.css" />
+
+<link rel="stylesheet" href="~/css/NavBar/miniNavBars.css" />
+<link rel="stylesheet" href="~/css/NavBar/navBar.css" />
+<link rel="stylesheet" href="~/css/NavBar/navBarDropdown.css" />
+
+<link rel="stylesheet" href="~/css/OffCanva/offCanva.css" />
+
+<link rel="stylesheet" href="~/css/PromoSlide/promoSlide.css" />
+
+<link rel="stylesheet" href="~/css/Sections/sectionBoxes.css" />
+<link rel="stylesheet" href="~/css/Sections/sectionsButtons.css" />
+<link rel="stylesheet" href="~/css/Sections/sectionsOverflow.css" />
+<link rel="stylesheet" href="~/css/Sections/sectionsPhoto.css" />
+<link rel="stylesheet" href="~/css/Sections/sectionsText.css" />
+
+@await Html.PartialAsync("offCanvaNavBar")
+
+<div class="form-container content" style=" background-size: cover; background-position: center;  background-repeat: no-repeat; margin-top: 100px;">
+    <div class="switch-box">
+        <button  data-view="fizinisAsmuoFormView" class="active" type="button" onclick="switchView('fizinisAsmuoFormView')">Fizinis asmuo</button>
+        <button data-view="juridinisAsmuoFormView" type="button" onclick="switchView('juridinisAsmuoFormView')">Juridinis asmuo</button>
+    </div>
+
+    <!-- View fizinisAsmuoFormView -->
+    <div id="view-fizinisAsmuoFormView" style="">
+        <form class="register-form form-body" action="/register" method="post">
+            @Html.AntiForgeryToken()
+            <h2>Fizinio asmens registracija</h2>
+            <div class="form-row">
+                <div class="form-group">
+                    <input type="text" id="firstName" name="RecieverName" required>
+                    <label for="firstName" class="form-label">Vardas*</label>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" id="lastName" name="RecieverSurname" required>
+                    <label for="lastName" class="form-label">Pavardė*</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="email" name="Email" value="@Model.Email" required>
+                    <label for="email" class="form-label">El. paštas*</label>
+                    <div class="error">@Html.ValidationMessageFor(m => m.Email)</div>
+                </div>
+
+                <div class="form-group">
+                    <input type="password" id="password" name="password" required>
+                    <label for="password" class="form-label">Slaptažodis*</label>
+                    <div class="error">@Html.ValidationMessageFor(m => m.Password)</div>
+                </div>
+                @* <div class="checkbox-inline" id="regAlignChk">
+                    <input type="checkbox" name="acceptPrivacyPolicy" value="true" id="privacyPolicy">
+                    <label for="privacyPolicy">Sutinku su privatumo politika</label>
+                </div> *@
+            </div>
+
+            <div class="checkbox-inline" id="regAlignChk">
+                <input type="checkbox" name="acceptPrivacyPolicy" value="true" id="privacyPolicyA" required>
+                <label for="privacyPolicyA">Sutinku su privatumo politika</label>
+            </div>
+
+            <button type="submit" class="submit-btn">Registruotis</button>
+        </form>
+
+        <p>Turiu paskyrą, <a href="/login">prisijungti</a>.</p>
+    </div>
+
+    <!-- View juridinisAsmuoFormView -->
+    <div id="view-juridinisAsmuoFormView" style="display: none;">
+        <form class="register-form form-body" action="/register" method="post">
+            @Html.AntiForgeryToken()
+            <h2 class="juridinis-name">Juridinio asmens registracija</h2>
+            <div class="form-row">
+                <div class="form-group">
+                    <input type="text" id="Code" name="Code" required>
+                    <label for="Code" class="form-label">Kodas*</label>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" id="PVMCode" name="PVMCode">
+                    <label for="PVMCode" class="form-label">PVM Kodas</label>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" id="CompanyName" name="CompanyName" required>
+                    <label for="CompanyName" class="form-label">Pavadinimas*</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="Country" name="Country" required>
+                    <label for="Country" class="form-label">Šalis*</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="Area" name="Region" required>
+                    <label for="Area" class="form-label">Savivaldybė*</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="City" name="City" required>
+                    <label for="City" class="form-label">Miestas*</label>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" id="Street" name="Street" required>
+                    <label for="Street" class="form-label">Gatvė*</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="HomeNumber" name="House" required>
+                    <label for="HomeNumber" class="form-label">Namas*</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="Apartment" name="Appartment" required>
+                    <label for="Apartment" class="form-label">Butas*</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="PostCode" name="ZipCode" required>
+                    <label for="PostCode" class="form-label">Pašto kodas*</label>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <input type="text" id="firstName" name="RecieverName" required>
+                    <label for="firstName" class="form-label">Vardas*</label>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" id="lastName" name="RecieverSurname" required>
+                    <label for="lastName" class="form-label">Pavardė</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="telefonas" name="Phone" required>
+                    <label for="telefonas" class="form-label">Telefonas*</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" id="email" name="Email" value="@Model.Email" required>
+                    <label for="email" class="form-label">El. paštas*</label>
+                    <div class="error">@Html.ValidationMessageFor(m => m.Email)</div>
+                </div>
+                <div class="form-group full-width">
+                    <input type="password" id="password" name="Password" required>
+                    <label for="password" class="form-label">Slaptažodis*</label>
+                    <div class="error">@Html.ValidationMessageFor(m => m.Password)</div>
+                </div>
+                @* <div class="checkbox-inline" id="regAlignChk">
+                    <input type="checkbox" name="acceptPrivacyPolicy" value="true" id="privacyPolicy">
+                    <label for="privacyPolicy">Sutinku su privatumo politika</label>
+                </div>  *@
+            </div>
+
+            <div class="checkbox-inline" id="regAlignChk">
+                <input type="checkbox" name="acceptPrivacyPolicy" value="true" id="privacyPolicyB" required>
+                <label for="privacyPolicyB">Sutinku su privatumo politika</label>
+            </div>
+            
+            <button id="registerButton" type="submit" class="submit-btn" href="/">Registruotis</button>
+        </form>
+
+            <p>Turiu paskyrą, <a href="/login">prisijungti</a>.</p>
+    </div>
+</div>
+
+<script>
+    window.onload = function () {
+        document.getElementById('fizbtn').click();
+    };
+</script>
+
+<script src="~/js/InvalidComponents.js"></script>
+<script src="~/js/registerFromSwitchView.js"></script>

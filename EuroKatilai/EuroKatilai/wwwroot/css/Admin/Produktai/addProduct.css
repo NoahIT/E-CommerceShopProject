@@ -1,0 +1,89 @@
+﻿
+.main-product-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    justify-content: center;
+    align-items:center;
+}
+
+.row-of-admin-product-edit{
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.create-product-inputs-container,
+.create-series-inputs-container,
+.create-category-inputs-container {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: 0px 1px 20px -10px black;
+    width: 300px;
+}
+
+.create-product-inputs-container strong,
+.create-series-inputs-container strong,
+.create-category-inputs-container strong{
+    font-size: 20px;
+    border-bottom: 2px solid tomato;
+}
+
+.create-product-inputs-container button,
+.create-series-inputs-container button,
+.create-category-inputs-container button{
+    background-color: white;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    margin-top: 10px;
+    padding: 10px;
+    box-shadow: 0px 1px 15px -10px black;
+}
+
+.create-product-inputs-container button:hover,
+.create-series-inputs-container button:hover,
+.create-category-inputs-container button:hover{
+    border: 1px solid tomato;
+    box-shadow: none;
+    transition: 0.1s ease-in;
+}
+
+.inputs-container {
+    display: flex;
+    flex-direction: column;
+    width: 280px;
+}
+
+.inputs-container form input, textarea, select{
+    margin: 5px;
+    border-radius: 5px;
+    border: 1px solid;
+    width: 250px;
+}
+
+.existing-categories{
+    padding: 15px;
+}
+
+.existing-categories h2 {
+    font-size: 20px;
+}
+
+.category-container ul {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid lightgrey;
+    border-radius: 10px;
+    padding: 10px;
+    overflow-y: auto;
+    height: 200px;
+}

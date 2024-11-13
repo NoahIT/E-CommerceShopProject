@@ -1,0 +1,135 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+.search-results {
+    position: absolute;
+    background: white;
+    margin-top: 50px;
+    margin-left: -170px;
+    width: fit-content;
+    display: none;
+    border: 2px solid #666666;
+    border-radius: 10px;
+    max-height: 500px;
+    padding-right: 20px;
+    overflow-y: auto;
+}
+
+    .search-results ul img {
+        margin-left: -30px;
+        width: 75px;
+        border-radius: 10px;
+    }
+
+    .search-results ul a {
+        font-size: 16px;
+    }
+
+    .custom-navbar {
+        position: fixed;
+        top: 30px; /* Height of the top mini-header */
+        width: 100%;
+        z-index: 1000;
+        background: #9c142d;
+        border-bottom: none;
+        height: 80px;
+    }
+
+.custom-navbar .navbar-nav .nav-link,
+.custom-navbar .navbar-brand,
+.custom-navbar .navbar-toggler-icon {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.custom-navbar .nav-icon-sizing {
+    font-size: 18px;
+    margin-right: 10px;
+}
+
+.custom-navbar .nav-icon {
+    margin-right: 20px;
+}
+
+.custom-navbar .navbar-nav {
+    color: white;
+    align-items: center;
+    padding-left: 1rem;
+}
+
+.custom-navbar .navbar-nav-right {
+    margin-left: auto;
+}
+
+.custom-navbar .navbar-toggler:focus {
+    outline: none;
+}
+
+.custom-navbar .nav-link {
+    padding: 0.5rem 1rem;
+}
+
+.custom-navbar .navbar-brand {
+    display: inline-flex;
+    letter-spacing: 2px;
+    align-items: center;
+    gap: -0.8rem;
+}
+
+.custom-navbar .navbar-brand img {
+    display: block;
+    max-height: 50px;
+    width: auto;
+    filter: brightness(100%);
+}
+
+.custom-navbar .navbar-brand span {
+    display: inline-block;
+    line-height: 1;
+    vertical-align: middle;
+}
+
+.custom-navbar .navbar-brand div {
+    line-height: 1;
+}
+
+.custom-navbar .navbar-brand .brand-second-line {
+    display: block;
+    margin-top: -2px;
+ }
+
+.search-input {
+    display: none; /* Hide initially */
+    position: absolute; /* Positioning relative to the nav-container */
+    right: 210px; /* Adjust based on your icon's position */
+    top: 21px; /* Align with the nav icon */
+    width: 0; /* Start with no width */
+    height: 40px; /* Match the height of your navbar */
+    padding: 0; /* No padding initially */
+    border: none;
+    outline: none;
+    transition: all 1s ease; /* Smooth transition for sliding effect */
+}
+
+#list-links{
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+    gap: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Class to apply when search is active */
+.search-input.active {
+    display: block; /* Show input */
+    width: 200px; /* The width of active search input */
+    padding: 0 10px; /* Padding when active */
+    background: white;
+}
+
+@media (max-width: 576px) {
+    .custom-navbar .navbar-nav .nav-link {
+        padding: 0.25rem 0.5rem;
+    }
+}

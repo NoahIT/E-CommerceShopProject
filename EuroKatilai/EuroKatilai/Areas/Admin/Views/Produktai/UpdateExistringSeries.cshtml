@@ -1,0 +1,76 @@
+﻿@model EuroKatilai.Areas.Admin.ViewModels.UpdateViewModelSeries
+
+@* <link rel="stylesheet" href="~/css/Admin/Produktai/updateProductSeries.css/> *@
+<link rel="stylesheet" href="~/css/Admin/Produktai/Series/updateProductSeriesInputs.css"/>
+
+<div class="main-update-product-container">
+    <div class="update-container">
+        <div class="cont-align">
+            <strong> Serijos atnaujinimas</strong>
+
+            <div class="update-inputs">
+                <form enctype="multipart/form-data" class="update-form" action="/admin/products/update-series" method="post">
+                    <div>
+                        <input placeholder="Serijos ID" type="number" name="idSeries" value="@Model.CurrentSeries.idSeries" />
+                        <input placeholder="Category ID" type="number" name="CategoryId" value="@Model.CurrentSeries.CategoryId" />
+                        <input placeholder="Brand ID" type="text" name="BrandId" value="@Model.CurrentSeries.BrandId" />
+                    </div>
+                        
+                        <input placeholder="Series name" type="text" name="SeriesName" value="@Model.CurrentSeries.SeriesName" />
+                        <input type="hidden" name="Photo" value="@Model.CurrentSeries.Photo" />
+                        <textarea style="min-height: 250px; min-width: 250px;" placeholder="Short Description" name="ShortDescription">@Model.CurrentSeries.ShortDescription</textarea>
+                        <textarea style="min-height: 250px; min-width: 250px;" placeholder="Description" name="Description">@Model.CurrentSeries.Description</textarea>
+                        <textarea style="min-height: 250px; min-width: 250px;" placeholder="Characteristics" name="Characteristics">@Model.CurrentSeries.Characteristics</textarea>
+                        <input placeholder="Abbr" type="text" name="Abbr" value="@Model.CurrentSeries.Abbr" />
+
+                    <input type="file" name="newPhoto" />
+                    <button>Atnaujinti produktą</button>
+                </form>
+
+                <form action="/admin/products/delete-series" method="post">
+                    <input type="hidden" value="@Model.CurrentSeries.idSeries" name="id" />
+                    <button>Ištrinti produktą</button>
+                </form>
+            </div>
+        </div>
+
+
+        <div class="update-table-view" id="brandUpdate">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Serijos Id</th>
+                        <th>Category Id</th>
+                        <th>Brand Id</th>
+                        <th>Series Name</th>
+                        <th>Photo</th>
+                        <th>Short Desctiption</th>
+                        <th>Desctiption</th>
+                        <th>Characterisctics</th>
+                        <th>Abbr</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var product in Model.Series)
+                    {
+                        <form action="/admin/products/series" method="post">
+                            <tr>
+                                <td>@product.idSeries<input type="hidden" value="@product.idSeries" name="idSeries" /></td>
+                                <td>@product.CategoryId <input type="hidden" value="@product.CategoryId" name="CategoryId" /></td>
+                                <td>@product.BrandId <input type="hidden" value="@product.BrandId" name="BrandId" /></td>
+                                <td>@product.SeriesName <input type="hidden" value="@product.SeriesName" name="SeriesName" /></td>
+                                <td><img style="min-height: 100px; min-width: 100px; max-height: 100px; max-width: 100px" alt="@product.Photo" src="@Url.Content("~/"+product.Photo)"><input type="hidden" value="@product.Photo" name="Photo" /></td>
+                                <td>@product.ShortDescription <input type="hidden" value="@product.ShortDescription" name="ShortDescription" /></td>
+                                <td>@product.Description<input type="hidden" value="@product.Description" name="Description" /></td>
+                                <td class="seriesCharacteristics">@product.Characteristics<input type="hidden" value="@product.Characteristics" name="Characteristics" /></td>
+                                <td>@product.Abbr<input type="hidden" value="@product.Abbr" name="Abbr" /></td>
+                                <td><button>Pasirinkti</button></td>
+                            </tr>
+                        </form>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>

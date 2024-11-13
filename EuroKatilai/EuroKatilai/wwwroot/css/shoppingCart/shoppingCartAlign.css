@@ -1,0 +1,48 @@
+﻿/* Heading and Product row alignment */
+.heading-row > span,
+.product-row > div {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 40px;
+}
+
+/* Specific widths for the flex items */
+.heading-row > span:nth-child(1),
+.product-row > div:nth-child(1) {
+  flex: 2; /* Adjust the flex value as needed */
+}
+
+.heading-row > span:nth-child(2),
+.product-row > div:nth-child(2),
+.quantity-container {
+  flex: 1;
+}
+
+.heading-row > span:nth-child(3),
+.product-row > div:nth-child(3),
+.price-container {
+  flex: 1;
+}
+
+.heading-row > span:nth-child(4),
+.product-row > div:nth-child(4),
+.total-container {
+  flex: 1;
+}
+
+/* Make sure the image and title align to the start of the first flex item */
+.product-row > div:first-child {
+  justify-content: flex-start;
+}
+
+/* Align the title next to the image */
+.product-title {
+  margin-left: 10px; /* Adjust as necessary */
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    opacity: 1; /* For WebKit/Blink browsers, setting opacity to 1 might make them always visible */
+}

@@ -1,0 +1,130 @@
+﻿@using Newtonsoft.Json
+@model ProductViewModel
+
+@{
+    ViewData["Title"] = "ProductView";
+}
+
+<link rel="stylesheet" href="~/css/Sections/sectionBoxes.css" />
+<link rel="stylesheet" href="~/css/Sections/sectionsButtons.css" />
+<link rel="stylesheet" href="~/css/Sections/sectionsOverflow.css" />
+<link rel="stylesheet" href="~/css/Sections/sectionsPhoto.css" />
+<link rel="stylesheet" href="~/css/Sections/sectionsText.css" />
+<link rel="stylesheet" href="~/css/ProductView/productView.css" />
+
+<link rel="stylesheet" href="~/css/Breadcrumbs/breadcrumbs.css" />
+<link rel="stylesheet" href="~/css/BodyBg/bodyBg.css" />
+
+@await Html.PartialAsync("offCanvaNavBar")
+
+<div class="bg-body-vw" style="border-radius: 10px; box-shadow: 0px 1px 25px -10px black; padding: 5px; margin-bottom: 10px;">
+
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Pradžia</a></li>
+            <li class="breadcrumb-item active" aria-current="page">@Model.SeriesModel.SeriesName</li>
+        </ol>
+    </nav>
+
+    <div class="container">
+
+        <div class="row">
+            <div class="column image-column">
+                <img class="manufacturer-logo" src="@Url.Content("~/" + @Model.SeriesModel.Photo)" alt="@Model.SeriesModel.SeriesName">
+            </div>
+
+            <div class="column content-column">
+                <h1>@Model.SeriesModel.SeriesName</h1>
+
+                @{
+
+                        var splited = Model.SeriesModel.Description.Split('.');
+                    
+                        foreach (var text in splited)
+                        {
+                            <p style="display:flex; text-align:left; justify-content:flex-start">
+                                ○ @text
+                            </p>
+                        }
+                    
+
+                }
+
+
+                    @foreach (var table in @Model.Tables)
+                    {
+                        <table class="product-table">
+                            <h class="table-name">@table.TableName</h>
+                            <thead>
+                            <tr>
+                                <th>Modelis</th>
+                                <th>Galingumas kW</th>
+                                <th>Energijos efektyvumas</th>
+                                @if (table.Models.FirstOrDefault(x => x.DicAttributes == new Dictionary<string, string>()) == null)
+                                {
+                                    foreach (var dicAttributesKey in table.Models[0].DicAttributes.Keys)
+                                    {
+                                        <th>@dicAttributesKey</th>
+                                    }
+                                }
+                                <th>Kaina</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var tablesModel in table.Models)
+                                {
+                                    <tr>
+                                        <td>@tablesModel.Model</td>
+                                        <td>@tablesModel.Power</td>
+                                        <td>@tablesModel.Energy</td>
+
+                                        @if (tablesModel.DicAttributes != new Dictionary<string, string>())
+                                        {
+                                            foreach (var dicAttributesValue in tablesModel.DicAttributes.Values)
+                                            {
+                                                <td>@dicAttributesValue</td>
+                                            }
+                                        }
+                                        <td style="min-width: 98px">@tablesModel.Price €</td>
+                                        <td>
+                                            <form action="/cart/add" method="post">
+                                                @Html.AntiForgeryToken()
+                                                <input type="hidden" name="productid" value="@tablesModel.ProductId" />
+                                                <button class="series-button">Pasirinkti</button>
+                                            </form>
+                                        </td>
+                                    </tr>
+
+                                }
+                            </tbody>
+                        </table>
+                    }
+                
+            </div>
+
+        </div>
+
+        <div class="section-container-text section-bg">
+            <div class="section-box-brand-text spanning-box">
+                <h2 style="margin-top:60px; margin-bottom: 50px; color: black">Charakteristikos</h2>
+            </div>
+        </div>
+
+        @{
+            var dicChar = JsonConvert.DeserializeObject<Dictionary<string, string>>(@Model.SeriesModel.Characteristics);
+
+            if (dicChar != null)
+            {
+                foreach (var x in dicChar.Keys)
+                {
+                    <dl class="characteristics">
+                        <dt>@x</dt>
+                        <dd>@dicChar[x]</dd>
+                    </dl>
+                }
+            }
+        }
+
+    </div>
+</div>
+

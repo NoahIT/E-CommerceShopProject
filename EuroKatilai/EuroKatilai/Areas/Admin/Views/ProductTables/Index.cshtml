@@ -1,0 +1,49 @@
+﻿@model List<DAL.Models.ProductTables>
+
+<link rel="stylesheet" href="~/css/Admin/ProductTables/productTables.css" />
+
+<div class="main-inp-container">
+
+    <strong>Produktų lentelių valdymas</strong>
+
+    <div class="inputs-container">
+        <form class="input-forms" action="/admin/productTables/add" method="post">
+            <input placeholder="Pavadinimas" type="text" name="TableName" />
+            <input placeholder="Modelių ID" type="text" name="ModelsId" value="[1,2,3,4]" />
+            <input placeholder="Serijos ID" type="text" name="SeriesId" />
+
+            <button>Pridėti </button>
+        </form>
+    </div>
+
+    <div class="inputs-container">
+        <form class="input-forms" action="/admin/productTables/delete" method="post">
+            <input placeholder="ID" type="number" name="id" />
+
+            <button>Pašalinti pagal ID </button>
+        </form>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>TableId</th>
+                <th>TableName</th>
+                <th>ModelId</th>
+                <th>SeriesId</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.TableId</td>
+                    <td>@item.TableName</td>
+                    <td>@item.ModelsId</td>
+                    <td>@item.SeriesId</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+

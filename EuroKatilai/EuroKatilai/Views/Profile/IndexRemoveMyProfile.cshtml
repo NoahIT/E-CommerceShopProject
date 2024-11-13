@@ -1,0 +1,60 @@
+﻿
+@{
+    ViewData["Title"] = "Paskyros Šalinimas";
+}
+
+<link rel="stylesheet" href="~/css/Breadcrumbs/breadcrumbs.css" />
+<link rel="stylesheet" href="~/css/Profile/profile.css" />
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Pradžia</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Profilis</li>
+    </ol>
+</nav>
+
+<div class="profile-container">
+
+    <div class="profile-side-panel">
+        <div class="side-panel">
+            <a asp-controller="Profile" asp-action="Index" asp-route-tab="my-profile">
+                <button type="button" id="profile_link">Mano Profilis</button>
+            </a>
+            <a asp-controller="Profile" asp-action="Index" asp-route-tab="my-orders">
+                <button type="button" id="orders_link">Mano užsakymai</button>
+            </a>
+            <a asp-controller="Profile" asp-action="Index" asp-route-tab="change-password">
+                <button type="button" id="password_link">Slaptažodžio keitimas</button>
+            </a>
+            <a asp-controller="Profile" asp-action="Index" asp-route-tab="remove-profile">
+                <button type="button" id="delete_link" style="background-color: #9c142d; color: white;">Pašalinti paskyrą</button>
+            </a>
+
+            <a href="/profile/logout"> <button type="button" id="logout_link">Atsijungti</button></a>
+            
+        </div>
+    </div>
+
+    <div class="profile-content-panel">
+        <div class="profile-content" id="del">
+            <h1>Pašalinti paskyrą</h1>
+
+            <form class="profile-form" action="/profile/delete-account" method="post">
+                <input type="hidden" name="ProfileId" />
+                @Html.AntiForgeryToken()
+
+                <div class="form-field">
+                    <div class="profile-del-form">
+                        Ar tikrai norite ištrinti savo paskyrą ?
+                    </div>
+                </div>
+
+                <button class="form-button">Pašalinti paskyrą</button>
+            </form>
+        </div>
+    </div>
+
+    
+</div>
+
+<script src="~/js/InvalidComponents.js"></script>

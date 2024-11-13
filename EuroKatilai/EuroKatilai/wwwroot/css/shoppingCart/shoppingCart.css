@@ -1,0 +1,167 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+* {
+    font-family: 'Montserrat', sans-serif;
+    box-sizing: border-box;
+}
+
+.cart-section {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.cart-section-left {
+    margin-top: 50px;
+}
+
+.cart-section-right {
+    margin-top: 100px;
+}
+
+.heading-row, .product-row, .product-optional-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+}
+
+.heading-row {
+    font-weight: bold;
+    border-bottom: 1px solid #ccc;
+}
+
+.product-row > div:first-child {
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+
+.product-details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.product-row img {
+    width: 110px;
+}
+
+.price-container, .total-container{
+    margin-bottom: 23px;
+}
+
+.quantity-container,
+.price-container,
+.total-container {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.quantity-input {
+    width: 100px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+.total-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+
+.discount-price, .final-price, .total-price {
+    margin-left: 5px;
+}
+
+.total-price-h2{
+    font-size: 20px;
+}
+
+.cart-summary {
+    margin-top: -90px;
+    width: 300px;
+    padding: 15px;
+    border-radius: 10px;
+    background: white;
+    border: 1px solid lightgrey;
+}
+
+.price-detail {
+    margin-bottom: 10px;
+}
+
+.price-detail p{
+    font-size: 14px;
+}
+
+.price-detail #detail-name{
+    font-size: 15px;
+    border-bottom: 1.5px solid grey;
+}
+
+.item-detail-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.total-price {
+    font-weight: bold;
+}
+
+/* Discount code section */
+.discount-code {
+    margin-bottom: 20px;
+}
+
+.discount-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.discount-input {
+    flex-grow: 1;
+    font-size: 12px;
+    margin-right: 10px; /* Spacing between input and button */
+}
+
+.total-price h2 {
+    font-size: 18px; /* Match the size in the first image */
+    font-weight: 600;
+    color: black;
+}
+
+.discount-error{
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+    font-size: 13px;
+    letter-spacing: -0.1px;
+}
+
+@media (max-width: 768px) {
+    .cart-section {
+        flex-direction: column;
+    }
+
+    .cart-summary {
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .heading-row > span,
+    .product-details > div {
+        text-align: left;
+    }
+}

@@ -1,0 +1,42 @@
+﻿@model BrandViewModel
+
+@{
+    ViewData["Title"] = "BrandView";
+}
+
+<link rel="stylesheet" href="~/css/BrandView/brandView.css" />
+<link rel="stylesheet" href="~/css/Sections/sectionsOverflow.css" />
+<link rel="stylesheet" href="~/css/Sections/sectionsText.css" />
+
+<link rel="stylesheet" href="~/css/Breadcrumbs/breadcrumbs.css" />
+<link rel="stylesheet" href="~/css/BodyBg/bodyBg.css" />
+
+@await Html.PartialAsync("offCanvaNavBar")
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Pradžia</a></li>
+        <li class="breadcrumb-item active" aria-current="page">@Model.Brands[0].ClassName</li>
+    </ol>
+</nav>
+
+<div class="bg-body-vw" style="border-radius: 10px; margin: auto; box-shadow: 0px 1px 25px -10px black; padding: 10px; margin-top: 50px;">
+
+    <div class="section-container-text">
+        <div class="section-box-brand-text spanning-box" style="margin-bottom: -50px;">
+            <h2 style="margin-top: 30px; margin-bottom: 40px; color: Black">@Model.Brands[0].ClassName</h2>
+        </div>
+    </div>
+
+    <div class="economical-brands">
+        @foreach (var x in Model.Brands)
+        {
+            @* <div class="brand"> *@
+                <a class="brand" asp-area="" asp-controller="series" asp-action="IndexBrandId" asp-route-id="@x.idBrand">
+                    <img src="@Url.Content("~/" + @x.Photo)" alt="@x.Name" style="border-radius: 20px; width: 200px;" />
+                </a>
+            @* </div> *@
+        }
+    </div>
+</div>
+

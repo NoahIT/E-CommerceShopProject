@@ -1,0 +1,90 @@
+﻿
+.payment-summary {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 340px;
+    padding: 18px;
+    background: linear-gradient(90deg, rgba(226,94,118,1) 16%, rgba(156,20,45,1) 52%, rgba(96,33,33,1) 82%);
+    border-radius: 10px;
+}
+
+.discount-section {
+    display: flex;
+    gap: 10px;
+    margin-left: 50px;
+}
+
+.purchase-btn, #submit-btn {
+    border: none;
+    border-radius: 10px;
+    background: #9c142d;
+    color: white;
+    height: 40px;
+}
+
+.item-price-details {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-content: center;
+    border-radius: 10px;
+    padding: 5px;
+    border: 1px solid lightgrey;
+    background-color: white;
+}
+
+.purchase-btn {
+    margin-top: 10px;
+    background-color: #009900;
+}
+
+
+.price-detail {
+    gap: 30px;
+    padding: 5px;
+}
+
+#detail-name, .price-detail p{
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.price-detail {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10px;
+    border: 2px solid #9c142d;
+    margin-top: 10px;
+    height: 20%;
+    border-top: none;
+    border-right: none;
+    border-bottom: none;
+}
+
+.total-price {
+    margin-top: 10px;
+}
+
+.total-price, .total-price-h2 {
+    font-size: 20px;
+    color: #9c142d;
+}
+
+.personal-detailsD {
+    display: flex;
+}
+
+    .personal-detailsD label {
+        cursor: pointer;
+        font-size: 13px;
+        display: flex; /* Change from flex to block */
+        line-height: 1; /* Add line height for better control */
+        white-space: nowrap; /* Prevent wrapping */
+    }
+
+    .personal-detailsD input[type="checkbox"] {
+        margin-right: 10px;
+        vertical-align: middle; /* Aligns the checkbox vertically */
+        transform: scale(0.85); /* Makes the checkbox smaller */
+    }

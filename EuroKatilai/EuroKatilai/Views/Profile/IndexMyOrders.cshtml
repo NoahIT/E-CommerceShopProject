@@ -1,0 +1,78 @@
+﻿@model List<DAL.Models.OrderModel>
+@{
+    ViewData["Title"] = "Mano užsakymai";
+}
+
+<link rel="stylesheet" href="~/css/Breadcrumbs/breadcrumbs.css" />
+<link rel="stylesheet" href="~/css/Profile/profile.css" />
+<link rel="stylesheet" href="~/css/PaymentDetails/paymentDetails.css" />
+<link rel="stylesheet" href="~/css/PaymentDetails/paymentSummary.css" />
+<link rel="stylesheet" href="~/css/Breadcrumbs/breadcrumbs.css" />
+<link rel="stylesheet" href="~/css/BodyBg/bodyBg.css" />
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="/">Pradžia</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Profilis</li>
+    </ol>
+</nav>
+
+<div class="profile-container" id="profile-orders">
+
+    <div class="profile-side-panel">
+        <div class="side-panel">
+            <a asp-controller="Profile" asp-action="Index" asp-route-tab="my-profile">
+                <button type="button" id="profile_link">Mano Profilis</button>
+            </a>
+            <a asp-controller="Profile" asp-action="Index" asp-route-tab="my-orders">
+                <button type="button" id="orders_link" style="background-color: #9c142d; color: white;">Mano užsakymai</button>
+            </a>
+            <a asp-controller="Profile" asp-action="Index" asp-route-tab="change-password">
+                <button type="button" id="password_link">Slaptažodžio keitimas</button>
+            </a>
+            <a asp-controller="Profile" asp-action="Index" asp-route-tab="remove-profile">
+                <button type="button" id="delete_link">Pašalinti paskyrą</button>
+            </a>
+            <a href="/profile/logout"> <button type="button" id="logout_link">Atsijungti</button></a>
+
+        </div>
+    </div>
+
+    <div class="profile-content-panel" id="ord-cnt-id">
+        <div class="profile-content" id="profile-orders-id">
+            <h1>Mano Užsakymai</h1>
+            
+
+            <div class="heading-row">
+                <span class="heading">Užsakymo numeris</span>
+                <span class="heading">Statusas</span>
+            </div>
+                
+                @Html.AntiForgeryToken()
+
+                <div class="form-field" id="order-field">
+                
+                    @foreach (var order in @Model)
+                    {
+
+                            <div class="prod-ord">
+                                <div class="information-label">
+                                    <form method="post" action="/profile/order-details">
+                                        <input type="hidden" name="orderId" value="@order.OrderId">
+                                        <button id="orderID">@order.OrderId</button>
+                                    </form>
+                                </div>
+
+                                <div class="order-information">
+                                    <div class="information-label">
+                                        @order.Status
+                                    </div>
+                                </div>
+                            </div>
+                    }
+                </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/InvalidComponents.js"></script>

@@ -1,0 +1,247 @@
+﻿.profile-container {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 650px;
+    margin: 20px auto;
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-start;
+    border: 1px solid lightgrey;
+    gap: 30px;
+}
+
+#finalPriceId{
+    font-size: -10px;
+}
+
+#orderID {
+    background-color: transparent;
+    border: 1px solid #9c142d;
+    border-radius: 10px;
+    color: #9c142d;
+    font-weight: 500;
+}
+
+.heading-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    align-items: center;
+    font-weight: bold;
+    border-bottom: 1px solid #ccc;
+}
+
+.profile-content-panel {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border: 1px solid #e6e6e6;
+    border-radius: 10px;
+    width: fit-content;
+}
+
+#ord-cnt-id {
+    max-width: 850px;
+}
+
+.profile-container h1 {
+    padding: 10px;
+    margin-bottom: 0px;
+}
+
+.profile-content-panel h1 {
+    margin-bottom: 30px;
+}
+
+.profile-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#del{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+    align-content: center;
+}
+
+#del h1{
+    border-bottom: 2px solid #9c142d;
+}
+
+#profile-orders-id h1 {
+    border-bottom: 2px solid #9c142d;
+}
+
+.profile-del-form {
+    font-size: 20px;
+    padding: 10px;
+    text-align: left;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-input {
+    width: 100%;
+    padding: 10px;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+}
+
+.form-error {
+    color: red;
+    font-size: 0.8em;
+}
+
+.form-button {
+    background-color: #9c142d;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.form-button:hover {
+    background-color: #ff8566;
+}
+
+.profile-image img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+}
+
+input[type="file"] {
+    padding: 10px;
+}
+
+.profile-content h1{
+    display: flex;
+    justify-content: center;
+}
+
+/*aside pannel -----------*/
+.side-panel {
+    width: 250px;
+    background: #e6e6e6;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    height: 100%;
+
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.side-panel a {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+}
+
+.side-panel button {
+    display: block;
+    margin-top: 15px;
+    padding: 10px;
+    background: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 5px;
+    color: black;
+    font-weight: 400;
+    text-decoration: none;
+    border-radius: 10px;
+    border: none;
+    transition: background-color 0.7s ease;
+}
+
+.side-panel button:hover,
+.side-panel button.active {
+     background: #9c142d;
+     color: white;
+}
+
+#delete-link{
+    color: red;
+}
+
+#delete-link:hover{
+    background: black;
+}
+
+/* Active tab style */
+.side-panel button.active {
+  background-color: #fff; /* Active tab color */
+  border-bottom: 2px solid #009578; /* Adjust the color to match your form design */
+  color: #009578; /* Adjust the text color as needed */
+}
+
+/*order contentas -------------------------------------------------------------------------------*/
+
+.heading-row > span,
+.prod-ord > div {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading {
+    margin-top: -30px;
+    font-size: 14px;
+    color: #5a0c1a;
+}
+
+.prod-ord {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.form-field {
+    margin-bottom: 10px;
+}
+
+#order-field{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.order-img img {
+    width: 100px;
+    border-right: 2px solid #9c142d;
+}
+
+.information-label {
+    padding: 10px;
+    text-align: center;
+    font-size: 15px;
+
+    word-wrap: break-word;
+}
+
+.remove-order{
+    padding: 15px;
+    font-size: 15px;
+}
+
+.remove-label a{
+    color: #9c142d;
+    font-weight: bold;
+    text-decoration: none;
+}
